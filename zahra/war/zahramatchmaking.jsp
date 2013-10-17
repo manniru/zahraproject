@@ -584,3 +584,24 @@ for (Entity result : pq.asIterable()) {
 }
 
 %>
+
+
+
+<%
+// TESTING
+
+int n = (int)Math.floor(Math.random()*100000+1);
+String rp = n+"";
+        System.out.println("Random Numbers "+n+"");
+        
+       // String str = "AMIT";  
+        String [] ar = rp.split("");
+        for(String s: ar) {
+        	System.out.println(s);
+        }
+
+
+
+
+
+%>
