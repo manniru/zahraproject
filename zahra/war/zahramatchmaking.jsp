@@ -590,14 +590,16 @@ for (Entity result : pq.asIterable()) {
 <%
 // TESTING
 
-int n = (int)Math.floor(Math.random()*100000+1);
-String rp = n+"";
-        System.out.println("Random Numbers="+n+"");
+int rn = (int)Math.floor(Math.random()*100000+1);
+String rp = rn+"";
+        System.out.println("Random Numbers="+rn+"");
         
        // String str = "AMIT";  
         String [] ar = rp.split("");
         for(String s: ar) {
-        	System.out.println(s);
+        	int nu = 1;
+        	try {  nu = Integer.parseInt(s); } catch(Exception e) { }
+        	System.out.println(nu);
         }
 
 
