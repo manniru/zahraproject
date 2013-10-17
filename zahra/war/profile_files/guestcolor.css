@@ -1,0 +1,28 @@
+#main-content {background-color:#fff;-moz-box-shadow: 4px 4px 4px #333;/*FF3.5+*/-webkit-box-shadow: 4px 4px 4px #333;/*Saf3.0+,Chrome*/box-shadow: 4px 4px 4px #333;/*Opera 10.5,IE9,Chrome 10+*/}
+a:link, a:visited {color:#333}
+a:hover {color:#000}
+/*----------------------------------------------
+FORM
+----------------------------------------------*/
+input, select, textarea {border:1px solid #ACABAB}
+/*----------------------------------------------
+LOGIN BOX
+----------------------------------------------*/
+#login-box-hdr, #login, #login label {color:#fff;}
+#login-box-hdr a:link, #login-box-hdr a:visited {color: #000}   
+#login-box-hdr a:hover {color:#aaa}
+/*----------------------------------------------
+MEMBER LOGIN
+----------------------------------------------*/
+.memlogin {background:transparent url(/assets/images/generic/bg-member.png) no-repeat;_background: none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/images/generic/bg-member.png', sizingMethod='crop')}
+.memlogin a:link, .memlogin a:visited {color:#000}
+.memlogin span,.memlogin a:hover {color:#333}
+/*----------------------------------------------
+CM TRADEMARK FOOTER
+------------------------------------------------*/
+#trademark  p {color:#fff}
+/*----------------------------------------------
+CONFIRMATION
+-----------------------------------------------*/
+#confirmation h2 {color:#555;border-top:1px dashed #eee}
+#confirmation {color:#333}

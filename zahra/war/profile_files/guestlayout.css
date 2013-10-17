@@ -1,0 +1,55 @@
+#main-content {padding:5px 0}
+/*----------------------------------------------
+HEADER
+-----------------------------------------------*/
+#header {height:85px;}
+#header .logo {float:left;margin:10px 0 0;}
+#lang_navguest {float:right;padding-top:5px;}
+/*----------------------------------------------
+NAV
+-----------------------------------------------*/
+#nav {height:35px;text-align:left;}
+#nav ul {display:block;float:left;padding:6px 0 0 15px;width:600px;list-style: none;}
+#nav li {display: inline;}
+#nav li a:link, #nav li a:visited {padding:0 2px;text-decoration: none;font-weight:700;font-size: 11px;line-height: 20px;}
+/*----------------------------------------------
+LOGIN BOX
+----------------------------------------------*/
+#login-box {float:right;margin-right:30px;padding-top:15px;width:250px;}
+#login-box-hdr {width:250px;font-weight:700;}
+#login-box-hdr em {display:block;float:left;padding-left:15px;width:150px;}
+.cm-logo {float:right;padding:29px 0 0;}
+
+#login { padding:5px 0 0; text-align: left;}
+#login label{float:left;margin-top:5px;}
+#login .text { margin:0 5px; width: 50px; font-size: 12px;}
+#login-box-hdr a:link, #login-box-hdr a:visited {display:block;float:right;padding-left:15px;text-align:right;text-decoration:none;font-weight:400;font-size:12px;}   
+/*----------------------------------------------
+MEMBER LOGIN
+----------------------------------------------*/
+.memlogin {background:transparent url(/assets/images/generic/bg-member.png) no-repeat;_background: none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/images/generic/bg-member.png', sizingMethod='crop');}
+.memlogin span {float:left;padding:7px 0 0;width:auto;}
+.memlogin a:link, .memlogin a:visited {display:block;float:right;padding:7px 0 0;width:auto;text-decoration:underline;font-weight:700;font-size:12px;}
+.memlogin a:hover {text-decoration:none;font-size:12px;}
+/*----------------------------------------------
+FORM
+----------------------------------------------*/
+a { cursor: pointer; _position: relative;}
+input {margin-bottom:2px; cursor: text;_position: relative;}
+/*----------------------------------------------
+FOOTER
+-----------------------------------------------*/
+#footer {clear:both;height:30px;text-align: center;font:10px Verdana, Geneva, sans-serif;}
+#footer a:link, #footer a:visited {padding:0 3px;text-decoration:none;font-weight:400;font-size:10px;}
+#footer p {padding:5px 0;}
+/*----------------------------------------------
+CM TRADEMARK FOOTER
+------------------------------------------------*/
+#trademark {text-align:center;font-style:normal;}
+#trademark  p {padding:0 5px 5px;font:10px Verdana, Geneva, sans-serif;line-height:1.5em;}
+/*----------------------------------------------
+CONFIRMATION
+-----------------------------------------------*/
+#confirmation h1 {display:block;margin-bottom:10px;font-size:17px;}
+#confirmation h2 {display:block;margin:20px 0 15px;padding-top:20px;font-size:12px;}
+#confirmation {margin:10px;padding:20px;text-align:center;}

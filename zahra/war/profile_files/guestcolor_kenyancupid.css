@@ -1,0 +1,11 @@
+body {background:#B29868 url("/assets/images/generic/guestPage-backGround.jpg") repeat-x scroll 0 0;color: #333}
+/*----------------------------------------------
+NAV
+-----------------------------------------------*/
+#nav ul, #nav li a:link, #nav li a:visited {color:#fff}
+#nav li a:hover {color:#eee}
+/*----------------------------------------------
+FOOTER
+-----------------------------------------------*/
+#footer p, #footer a:link, #footer a:visited {color: #fff}   
+#footer a:hover {color: #eee}
