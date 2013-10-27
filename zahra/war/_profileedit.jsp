@@ -128,13 +128,13 @@ if(request.getParameter("profilebtn") != null) {
 	<li class="sectionHeading clearfix"><h2>Account Information</h2></li>
 
 <li class="clearfix"><label class="questionLabel">User ID:</label>
-<input type="text" name="userid" id="userid" size="20" value="<%=uid %>" ></li>
+<input type="text" name="userid" id="userid" size="20" value="<%=uid %>" disabled></li>
 
 <li class="clearfix"><label class="questionLabel">Profile ID:</label>
-<input type="text" name="profileid" id="profileid" size="20" value="<%=profileid %>" ></li>
+<input type="text" name="profileid" id="profileid" size="20" value="<%=profileid %>" disabled></li>
 
 <li class="clearfix"><label class="questionLabel">Username:</label>
-<input type="text" name="username" id="username" size="20" value="<%=username %>" ></li>
+<input type="text" name="username" id="username" size="20" value="<%=username %>" disabled></li>
  
 <li class="clearfix"><label class="questionLabel">Passwrod:</label>
 <input type="text" name="password" id="password" size="20" value="<%=password %>" ></li>
