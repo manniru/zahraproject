@@ -26,18 +26,30 @@ mobileno = 	e1.getProperty("mobileno").toString();
 password = 	e1.getProperty("password").toString();
 username = 	e1.getProperty("username").toString();
 age = 	e1.getProperty("age").toString();
-
 } catch(Exception e) { System.out.println(e); }
+
+try { Query q1 =  new Query("PROFILE");
+q1.addFilter("userid", Query.FilterOperator.EQUAL, uid);
+PreparedQuery pq = ds.prepare(q1);
+Entity pn  = pq.asSingleEntity();			
+userid = pn.getProperty("userid").toString();
+System.out.println(userid);
+profileid = pn.getKey().getId()+"";
+} catch(Exception e) { System.out.println("e="+e); }
 
 %>
 
 <%
 if(request.getParameter("profilebtn") != null) {
+	Entity en = null;
 	String fn = request.getParameter("firstName");
+	String pid = request.getParameter("profileid");
 	System.out.println(fn);
 	   Enumeration paramNames = request.getParameterNames();
 	   int noe = count("PROFILE");
-	   Entity en = new Entity("PROFILE",(noe+1));
+	   if(request.getParameter("profileid").equals("")) { en = new Entity("PROFILE",(noe+1)); }
+	   else { int pid2 = Integer.parseInt(pid);
+		   en = new Entity("PROFILE",pid2); }
 	   while(paramNames.hasMoreElements()) {
 	      String paramName = (String)paramNames.nextElement();
 	      //out.print("<tr><td>" + paramName + "</td>\n");
@@ -117,6 +129,9 @@ if(request.getParameter("profilebtn") != null) {
 
 <li class="clearfix"><label class="questionLabel">User ID:</label>
 <input type="text" name="userid" id="userid" size="20" value="<%=uid %>" ></li>
+
+<li class="clearfix"><label class="questionLabel">Profile ID:</label>
+<input type="text" name="profileid" id="profileid" size="20" value="<%=profileid %>" ></li>
 
 <li class="clearfix"><label class="questionLabel">Username:</label>
 <input type="text" name="username" id="username" size="20" value="<%=username %>" ></li>

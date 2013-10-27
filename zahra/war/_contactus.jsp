@@ -1,10 +1,6 @@
 
-    <div id="main" class="clearfix"><div id="main2">
-            <div class="inner">
-              <h1 class="title">Contact</h1>
-             
-              
-                              <div class="node">
+<div id="main" class="clearfix"><div id="main2"><div class="inner"><h1 class="title">Contact</h1>
+<div class="node">
     <div class="node2">
     <div class="taxonomy"></div>
   </div>

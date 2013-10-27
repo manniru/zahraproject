@@ -65,6 +65,8 @@
 <% if(request.getParameter("p") != null && request.getParameter("p").equalsIgnoreCase("password")) { %><%@include file="_password.jsp" %><% } %>
 <% if(request.getParameter("p") != null && request.getParameter("p").equalsIgnoreCase("videochat")) { %><%@include file="_videochat.jsp" %><% } %>
 <% if(request.getParameter("p") != null && request.getParameter("p").equalsIgnoreCase("upload")) { %><%@include file="_upload.jsp" %><% } %>
+<% if(request.getParameter("p") != null && request.getParameter("p").equalsIgnoreCase("message")) { %><%@include file="_message.jsp" %><% } %>
+
 
 <div id="sidebar-right" class="clearfix">
       
