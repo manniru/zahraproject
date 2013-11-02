@@ -79,9 +79,9 @@ String [] pn2 = {"age", "appearance", "bestFeature", "birthdate", "birthdate_day
 %>
 
 <%! String s_f="", s_w=""; //String profileid="", userid="", blobkey="", firstname="", gender="", lastname="", mobileno="", password="", username="", age="", photoid=""; %>
-<%! String age="", appearance="", bestFeature="", birthdate="", birthdate_day="", birthdate_month="", birthdate_year="", blobkey="", bodyArt="", bodyStyle="", childrenHave="", childrenNumber="", childrenOldest="", childrenWant="", childrenYoungest="", cityLive="", complexion="", countryLive="", drink="", education="", employmentStatus="", englishAbility="", ethnicity="", eyeColor="", eyeWear="", facialHair="", firstName="", firstname="", gender="", hairColor="", hairLength="", hairType="", height="", homeType="", incomeBracket="", incomeCurrency="", languageSpoken="", lastName="", lastname="", livingSituation="", maritalStatus="", mobileno="", nationality="", occupation="", password="", petsHave="", polygamy="", profilebtn="", profileid="", religion="", relocate="", resetCurrency="", smoke="", starSign="", stateLive="", tribe="", userid="", username="", weight=""; %>
+<%! String dob="", email="", datereg="", age="", appearance="", bestFeature="", birthdate="", birthdate_day="", birthdate_month="", birthdate_year="", blobkey="", bodyArt="", bodyStyle="", childrenHave="", childrenNumber="", childrenOldest="", childrenWant="", childrenYoungest="", cityLive="", complexion="", countryLive="", drink="", education="", employmentStatus="", englishAbility="", ethnicity="", eyeColor="", eyeWear="", facialHair="", firstName="", firstname="", gender="", hairColor="", hairLength="", hairType="", height="", homeType="", incomeBracket="", incomeCurrency="", languageSpoken="", lastName="", lastname="", livingSituation="", maritalStatus="", mobileno="", nationality="", occupation="", password="", petsHave="", polygamy="", profilebtn="", profileid="", religion="", relocate="", resetCurrency="", smoke="", starSign="", stateLive="", tribe="", userid="", username="", weight=""; %>
 
-<%! String path = ""; %>
+<%! String path = "", date=""; %>
 <% try { path = request.getParameter("p").substring(0, 8); } catch(Exception e1) { } %>
 
 <%! String uid = null, user = null, srch = null, msg = ""; %>
@@ -92,6 +92,12 @@ String [] pn2 = {"age", "appearance", "bestFeature", "birthdate", "birthdate_day
 <%! public String p = null; %><% if(request.getParameter("p") != null) {  p = request.getParameter("p"); } %>
 
 <% 
+Date dNow = new Date( ); 
+SimpleDateFormat ft = new SimpleDateFormat ("MM/dd/yyyy");
+date = ft.format(dNow);
+//System.out.println("date="+date);
+
+
 if(session.getAttribute("uid") != null) { uid = session.getAttribute("uid").toString(); } 
 if(session.getAttribute("user") != null) { user = session.getAttribute("user").toString(); }
 if(request.getParameter("msg") != null ) { msg = request.getParameter("msg"); }
@@ -143,7 +149,7 @@ if(session.getAttribute("s_w") != null) { s_w = session.getAttribute("s_w").toSt
     	int id = Integer.parseInt(result.getKey().getId()+"");
        String username = (String) result.getProperty("username");   
        String blobkey = (String) result.getProperty("blobkey");
-       System.out.println(id);
+      // System.out.println(id);
        o1 +="<tr><td><img src='/serve?blob-key="+blobkey+"' width='50' height='50' /></td></tr>"; 
        o1 +="<tr><td>"+username+"</td></tr>"; 
        n++;
@@ -207,7 +213,7 @@ out +="</tr>"+
     	Key ky = KeyFactory.createKey("USERS", nu);
     	Entity en = ds.get(ky);
     	blobkey = en.getProperty("blobkey").toString();
-    	} catch(Exception e3) { System.out.println("matsala a line 151:69"); }
+    	} catch(Exception e3) { System.out.println("matsala a zahramatchmaking.jsp 210:66"); }
     	out +="<td><img src='/serve?blob-key="+blobkey+"' width='50' height='50' /></td>";
      }		
 
@@ -223,7 +229,7 @@ out +="</tr>"+
 "<ul class='menu'>"+
 "</ul></div></div></div></div>"+
 
-"<div class='block2a'><div class='block2b'><div id='block-user-3' class='block block-user'><h2>Who's online</h2>"+
+"<div class='block2a'><div class='block2b'><div id='block-user-3' class='block block-user'><h2>Search Member</h2>"+
 "<div class='content'>There are currently <em>1 user</em> and <em>0 guests</em> online.<div class='item-list'>"+
 "<h3>Online users</h3><ul><li>admin</li></ul></div></div>"+
 "</div></div></div>";
@@ -288,7 +294,7 @@ out +="</tr>"+
 	mobileno = en.getProperty("mobileno").toString();
 	blobkey = en.getProperty("blobkey").toString();
 	//System.out.println("ent="+en.getProperty("username"));
-	} catch(Exception e) { System.out.println(e); }
+	} catch(Exception e) { System.out.println("e:usernamenu()"); }
 	
 	String out = "<div class='block2a'><div class='block2b'><div id='block-block-6' class='block block-block'>"+
 			"<h2>UserID("+uid+"), ProfileID("+profileid+"), Name("+user+")</h2><div class='content'>"+
@@ -320,16 +326,19 @@ out +="</tr>"+
 			"<div class='form-item'><label>Password:</label><input type='password' name='password' id='password' class='form-text' /></div>"+
 			"<div class='form-item'><label>First Name:</label><input type='text' name='firstname' id='firstname'  value='' class='form-text' /></div>"+
 			"<div class='form-item'><label>Last Name:</label><input type='text' name='lastname' id='lastname'  value='' class='form-text' /></div>"+
+			"<div class='form-item'><label>Email Address:</label><input type='text' name='email' id='email'  value='' class='form-text' /></div>"+
 			"<div class='form-item'><label>Mobile No:</label><input type='text' name='mobileno' id='mobileno'  value='' class='form-text' /></div>"+
+			"<div class='form-item'><label>Date of Birth:</label><input type='text' name='dob' id='dob'  value='' class='form-text' /></div>"+
+			"<div class='form-item'><input type='hidden' name='datereg' id='datereg'  value='"+date+"'/></div>"+
 			"<div class='form-item'><label>Gender</label><select name='gender' id='gender'>"+
-			"<option value='Male'>Male</option><option value='Female'>Female</option></select></div>"+
-			
+			"<option value='Male'>Male</option><option value='Female'>Female</option></select></div>";
+	/**		
 			"<div class='form-item'><label>Age</label><select name='age' id='age'>";
 			for(int y=18;y<=100;y++) { out +="<option value='"+y+"'>"+y+"</option>"; }
 			//"<option value='Male'>Male</option><option value='Female'>Female</option>"+
 			
 			out +="</select></div>";
-			
+	*/		
 		    Random Generator = new Random();
 		    int r = Generator.nextInt(10000);
 		    
@@ -357,13 +366,15 @@ if(request.getParameter("signup") != null) { int id=1;
 String code1 = request.getParameter("code1");
 String code2 = request.getParameter("code2");
 if(code1.equalsIgnoreCase(code2)) {
-String username = request.getParameter("username");
+	String username = request.getParameter("username");
 	String password = request.getParameter("password");
-	String mobileno = request.getParameter("mobileno");
 	String firstname = request.getParameter("firstname");
 	String lastname = request.getParameter("lastname");
+	String email = request.getParameter("email");
+	String mobileno = request.getParameter("mobileno");
 	String gender = request.getParameter("gender");
-	String age = request.getParameter("age");
+	String dob = request.getParameter("dob");
+	String datereg = request.getParameter("datereg");
 	
 	if(request.getParameter("userid") != null) { 
 		String userid = request.getParameter("userid");
@@ -377,7 +388,9 @@ String username = request.getParameter("username");
 	en.setProperty("firstname", firstname);
 	en.setProperty("lastname", lastname);
 	en.setProperty("gender", gender);
-	en.setProperty("age", age);
+	en.setProperty("dob", dob);
+	en.setProperty("email", email);
+	en.setProperty("datereg", datereg);
 	ds.put(en);
 	
 	session.setAttribute("uid", id);
@@ -430,7 +443,7 @@ if(request.getParameter("login") != null) {
 
 <%! public String account(String user) {
 	int uid2 = Integer.parseInt(uid);
-	String username="", pword="", fname="", lname="", mobileno="", gender="", age="", blobkey="";
+	String username="", pword="", fname="", lname="", mobileno="", gender="", dob="", blobkey="", email="", datereg="";
 	String userid="";
 	try { Key ky = KeyFactory.createKey("USERS", uid2);
 	Entity en = ds.get(ky);
@@ -438,12 +451,14 @@ if(request.getParameter("login") != null) {
 	pword = en.getProperty("password").toString();
 	fname = en.getProperty("firstname").toString();
 	lname = en.getProperty("lastname").toString();
+	email = en.getProperty("email").toString();
 	mobileno = en.getProperty("mobileno").toString();
 	gender = en.getProperty("gender").toString();
-	age = en.getProperty("age").toString();
+	dob = en.getProperty("dob").toString();
+	datereg = en.getProperty("datereg").toString();
 	blobkey = en.getProperty("blobkey").toString();
 	//System.out.println("ent="+en.getProperty("username"));
-	} catch(Exception e) { System.out.println(e); }
+	} catch(Exception e) { System.out.println("e:account()"); }
 	
 	
 	try {
@@ -479,9 +494,11 @@ if(request.getParameter("login") != null) {
 			"<tr><td>Password: <b>"+pword+"</b></td></tr>"+
 			"<tr><td>Firstname: <b>"+fname+"</b></td></tr>"+
 			"<tr><td>Lastname: <b>"+lname+"</b></td></tr>"+
+			"<tr><td>Email Address: <b>"+email+"</b></td></tr>"+
 			"<tr><td>Mobile No: <b>"+mobileno+"</b></td></tr>"+
 			"<tr><td>Gender: <b>"+gender+"</b></td></tr>"+
-			"<tr><td>Age: <b>"+age+"</b></td></tr>"+
+			"<tr><td>Date of Birth: <b>"+dob+"</b></td></tr>"+
+			"<tr><td>Date Registered: <b>"+datereg+"</b></td></tr>"+
 			"</table></div></div></div></div>";
 			
 	return out; }
@@ -502,7 +519,7 @@ if(request.getParameter("login") != null) {
 	gender = en.getProperty("gender").toString();
 	age = en.getProperty("age").toString();
 	//System.out.println("ent="+en.getProperty("username"));
-	} catch(Exception e) { System.out.println(e); }
+	} catch(Exception e) { System.out.println("e:editaccount()"); }
 	
 	String out = "<div id='main' class='clearfix'><div id='main2'><div class='inner'><div class='breadcrumb'><a href='/'>Home</a></div>"+
 			"<h1 class='title'>Edit Account</h1><div class='tabs'><ul class='tabs primary'>"+
@@ -578,14 +595,14 @@ if(request.getParameter("login") != null) {
 %>
 
 <%! public String search(String user) { String out="";
-
+	String [] sb = {"username","password","firstname","lastname","gender","age","mobileno","email"};
 
 	out +="<div id='main' class='clearfix'><div id='main2'><div class='inner'><h1 class='title'>Search Members</h1>";
 	
 	out +="<form id='form1' name='form1' method='post' action=''>Search User By:<label>"+
 	  "<select name='fl' id='fl'><option value='--' >-Select-</option>";
 	  
-	  for(String st: pn2) {
+	  for(String st: sb) {
 		  out +="<option value='"+st+"' >"+st+"</option>";
 	  }
     
@@ -663,7 +680,7 @@ for (Entity result : pq.asIterable()) {
 	mobileno = en.getProperty("mobileno").toString();
 	blobkey = en.getProperty("blobkey").toString();
 	//System.out.println("ent="+en.getProperty("username"));
-	} catch(Exception e) { System.out.println(e); }
+	} catch(Exception e) { System.out.println("e:message()"); }
 	
 	String out = "<div class='block2a'><div class='block2b'><div id='block-block-6' class='block block-block'>"+
 			"<h2>My Account : "+user+"</h2><div class='content'>"+

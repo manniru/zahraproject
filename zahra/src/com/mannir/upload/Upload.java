@@ -32,7 +32,7 @@ public class Upload extends HttpServlet {
         BlobKey blobKey = blobs.get("myFile");
         
       //  int uid2 = Integer.parseInt(uid);
-    	String username="", pword="", fname="", lname="", mobileno="", gender="", age="";
+    	String username="", pword="", fname="", lname="", mobileno="", gender="", dob="", email="", datereg="";
     	try {
     	Key ky = KeyFactory.createKey("USERS", uid2);
     	Entity en = ds.get(ky);
@@ -42,7 +42,9 @@ public class Upload extends HttpServlet {
     	lname = en.getProperty("lastname").toString();
     	mobileno = en.getProperty("mobileno").toString();
     	gender = en.getProperty("gender").toString();
-    	age = en.getProperty("age").toString();
+    	dob = en.getProperty("dob").toString();
+    	email = en.getProperty("email").toString();
+    	datereg = en.getProperty("datereg").toString();
     	//System.out.println("ent="+en.getProperty("username"));
     	} catch(Exception e) { System.out.println(e); }
 
@@ -60,7 +62,9 @@ public class Upload extends HttpServlet {
         	en.setProperty("password", pword);
         	en.setProperty("username", username);
         	en.setProperty("gender", gender);
-        	en.setProperty("age", age);
+        	en.setProperty("dob", dob);
+        	en.setProperty("email", email);
+        	en.setProperty("datereg", datereg);
         	ds.put(en);
         	
         	

@@ -1,0 +1,942 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<head>
+
+
+
+
+
+
+
+<title>KenyanCupid.com</title>
+
+
+	<script language="Javascript">
+    function SessionTimeoutWarning() {
+        var nSeconds = 60*18*1000;
+        setTimeout("window.focus();alert('Your session will expire in 2 minutes - Please click something now to avoid being timed out')", nSeconds);	
+    }
+    </script>
+	
+	<script src="search_list_files/memberhe.js" type="text/javascript"></script>
+    
+    <!--[if lte IE 6]>
+    <script type="text/javascript" src="http://cdn.kenyancupid.com/assets/js/site/generic/supersleight-min.js"></script>
+    <![endif]-->
+
+     <script src="search_list_files/jquery-1.js" type="text/javascript"></script>
+
+
+
+<script src="search_list_files/global00.js" type="text/javascript"></script>
+
+
+	
+	<script src="search_list_files/pusher00.js" type="text/javascript"></script>
+    <script type="text/javascript" src="search_list_files/notifica.js"></script>
+
+	<script type="text/javascript">
+		
+		var provider = NOTIFICATION.setup('pusher','c9ba73b22fc2e0dd1089');
+		var channel = NOTIFICATION.getChannel('pusher',provider,'622D0DD9B21AA923B7AC4CBA5E78CEFF14376BE4259550149D5406F3B6EED01CF598B2CD08F9C18325648A6AB2CA5DFD69D4ED2187AEA8632488D0B15CF87A10');
+	    NOTIFICATION.executeBindings('pusher',channel);
+		NOTIFICATION.startInactivityTimer('pusher',provider);
+	</script>
+
+	<script src="search_list_files/jquery00.js" type="text/javascript"></script>
+    <script>
+	$.extend($.gritter.options, {
+		position: 'bottom-left',
+		fade_in_speed: 100,
+		fade_out_speed: 500,
+		time: 4000
+	});
+	</script>
+    <link rel="stylesheet" type="text/css" media="all" href="search_list_files/jquery00.css">
+    
+<script type="text/javascript">
+// block image states
+var blockuserimage_selected = 'http://cdn.kenyancupid.com/assets/images/mail/en/btn-blockuser-select.gif';
+var blockuserimage_orig = 'http://cdn.kenyancupid.com/assets/images/mail/en/btn-blockuser-up.gif';
+var blockuserimage_hover = 'http://cdn.kenyancupid.com/assets/images/mail/en/btn-blockuser-ov.gif';
+var blockuserimage_loading = 'http://cdn.kenyancupid.com/assets/images/mail/en/btn-blockuser-loading.gif';
+// interest image states
+var interestimage_selected = 'http://cdn.kenyancupid.com/assets/images/mail/en/btn-interest-select.gif';
+var interestimage_orig = 'http://cdn.kenyancupid.com/assets/images/mail/en/btn-interest-up.gif';
+var interestimage_hover = 'http://cdn.kenyancupid.com/assets/images/mail/en/btn-interest-ov.gif';
+var interestimage_loading = 'http://cdn.kenyancupid.com/assets/images/mail/en/btn-interest-loading.gif';
+// interest image states for prompt
+var interestimageprompt_selected = 'http://cdn.kenyancupid.com/assets/images/sitewide/en/btn-interest-select.gif';
+var interestimageprompt_orig = 'http://cdn.kenyancupid.com/assets/images/sitewide/en/btn-interest-up.gif';
+var interestimageprompt_hover = 'http://cdn.kenyancupid.com/assets/images/sitewide/en/btn-interest-ov.gif';
+var interestimageprompt_loading = 'http://cdn.kenyancupid.com/assets/images/sitewide/en/btn-interest-loading.gif';
+
+var siteTranslationPath = 'en';
+
+var connectionErrorText = 'Connection error';
+
+var okButton = 'OK';
+var cancelButton = 'Cancel';
+var deleteFromResultsButton = 'Delete';
+var yesButton = 'Yes';
+var noButton = 'No';
+
+var deleteFromResultsLink = '';
+var selectAllButton = 'Select All';
+var unselectAllButton = 'Unselect All';
+
+var notificationInterestTitle = 'Interest Sent';
+var notificationInterestText = '{1} has been notified that you are interested';
+
+var notificationFavoriteTitle = 'Added To Your Favorites';
+var notificationFavoriteText = '{1} has been added to your favorites list';
+</script>
+
+<script src="search_list_files/jquery01.js" type="text/javascript"></script>
+
+<script src="search_list_files/jquery02.js" type="text/javascript"></script>
+
+<script src="search_list_files/jquery03.js" type="text/javascript"></script>
+
+<script src="search_list_files/jquery04.js" type="text/javascript"></script>
+
+<script src="search_list_files/jquery05.js" type="text/javascript"></script>
+
+<script src="search_list_files/jquery06.js" type="text/javascript"></script>
+
+<script src="search_list_files/searchre.js" type="text/javascript"></script>
+
+<script src="search_list_files/launchem.js" type="text/javascript"></script>
+
+
+
+<link type="text/css" rel="stylesheet" href="search_list_files/global00.css">
+
+            <link type="text/css" rel="stylesheet" href="search_list_files/memberco.css">
+            <link type="text/css" rel="stylesheet" href="search_list_files/membercp.css">
+            <link type="text/css" rel="stylesheet" href="search_list_files/memberhe.css">
+            <link type="text/css" rel="stylesheet" href="search_list_files/memberla.css">
+		
+<link rel="stylesheet" type="text/css" media="all" href="search_list_files/jquery01.css">
+
+<link rel="stylesheet" type="text/css" media="all" href="search_list_files/jquery08.css">
+
+<link rel="stylesheet" type="text/css" media="all" href="search_list_files/jquery0E.css">
+
+<link type="text/css" rel="stylesheet" href="search_list_files/searchre.css">
+
+<style type="text/css" media="screen">
+
+</style>
+<!--[if lte IE 6]>
+<style type="text/css">
+.iconset {width:130px}
+.iconset li, .iconset a {margin-right:0px}
+.views li, .views a {margin-right:0px}
+.icons {padding:3px 0;margin:5px 0 0 3px;display:block;float:left}
+
+.platinumview, .goldview, .standardview {margin:10px 0 0 10px}
+#memberships {padding:0 0 5px 0px}
+</style>
+<![endif]-->
+<style>
+</style>
+
+
+<!--[if lte IE 7]><link href="http://cdn.kenyancupid.com/assets/css/site/generic/conditional/IE7.css?v=9" rel="stylesheet" type="text/css" /><![endif]-->
+<!--[if IE 6]><link href="http://cdn.kenyancupid.com/assets/css/site/generic/conditional/IE6.css?v=9" rel="stylesheet" type="text/css" /><![endif]-->
+<!--[if IE]><link href="http://cdn.kenyancupid.com/assets/css/site/generic/conditional/IE.css?v=9" rel="stylesheet" type="text/css" /><![endif]-->
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+var gptadslots=[];
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+(function(){ var gads = document.createElement('script');
+    gads.async = true; gads.type = 'text/javascript';
+    var useSSL = 'https:' == document.location.protocol;
+    gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+    var node = document.getElementsByTagName('script')[0];
+    node.parentNode.insertBefore(gads, node);
+})();
+</script>
+
+<script type="text/javascript">
+googletag.cmd.push(function() {
+    gptadslots[1]= googletag.defineSlot('/291063315/KN-160_600-Above-the-Fold', [[160, 600]],'div-gpt-ad-160_600_above_the_fold-0').addService(googletag.pubads());
+    gptadslots[2]= googletag.defineSlot('/291063315/KN-728_90-Above-the-Fold', [[728,90]],'div-gpt-ad-728_90_above_the_fold-0').addService(googletag.pubads());
+    gptadslots[3]= googletag.defineSlot('/291063315/KN-728_90-Below-the-Fold', [[728,90]],'div-gpt-ad-728_90_below_the_fold-0').addService(googletag.pubads());
+    gptadslots[4]= googletag.defineSlot('/291063315/KN-728_90-Below-the-Fold', [[728,90]],'div-gpt-ad-728_90_below_the_fold-1').addService(googletag.pubads());
+	
+	
+    googletag.pubads().setTargeting('ag', ['27']).setTargeting('ed', ['316']).setTargeting('ge', ['male']).setTargeting('in', ['251']).setTargeting('la', ['en']).setTargeting('oc', ['568']).setTargeting('re', ['643']);
+    googletag.pubads().enableAsyncRendering();
+    googletag.enableServices();
+});
+</script>
+
+
+</head>
+<body>
+<script> 
+				var chat_id = '207408'; 
+				var chat_name = 'Muneer'; 
+				var chat_avatar = 'http://cdn.kenyancupid.com/memphoto/Photo1/small/207408.jpg';
+				var chat_link = 'http://www.KenyanCupid.com/en/profile/profileRedirect?memberid=207408'; 
+				var chat_usergroup = '1';
+				var chat_checksum = '999137CBD607AFD52C2C64056E5CDACF';
+				var chat_lang = 'en';
+			</script> 
+			<link type="text/css" rel="stylesheet" href="search_list_files/277xcmcx.css">
+			<script type="text/javascript" src="search_list_files/277xcmcx.js"></script>
+
+												
+			<script>
+				function launchim(userID){
+					$.getJSON('http://www.KenyanCupid.com/en/widget/checkIMPermission?toid=' + userID, function(data) {
+						if(data.status==1){
+							jqcc.cometchat.chatWith(userID);
+						}
+						else{
+							if(data.reason=='notloggedin'){
+								location.href="http://www.KenyanCupid.com" + data.siteTranslationLegacyPath + "/logon_do.cfm?timeout&page=/en/results/search";
+							}
+							else if(data.reason=='upgrade'){
+								location.href="http://www.KenyanCupid.com/en/payment/upgrade?memberid=" + userID + "&userAction=im";
+							}
+							else{
+								showfailedmodal(data.modalheight,340,data.reason);
+							}
+							
+						}
+					});
+				}
+				function showfailedmodal(height,width,reason){
+					$('#failedimmodal').html('<iframe width="100%" height="100%" marginWidth="0" marginHeight="0" frameBorder="0" scrolling="auto" src="" id="iframefailedim"></iframe>').dialog({
+						modal: true,
+						autoOpen: true,
+						height: height,
+						width: width
+					});
+					$('#failedimmodal>#iframefailedim').attr('src', 'http://www.KenyanCupid.com/en/results/showFailedIM/?reason=' + reason);	
+				}
+			</script>
+			
+			
+			<div id="failedimmodal" style="display: none; margin:0px; padding:0px;"></div>
+		
+
+<script>dataLayer = [{
+			'memberConversion': 'FALSE',
+		
+		'memberGender':'Male',
+		'memberCountry':'157',
+		'memberGrade':'Standard',
+		'memberInDays':'26',
+		'memberAge':'27',
+		'memberEthnicity':'343',
+	 	'memberID':'207408'
+	}];</script>
+
+<!-- Google Tag Manager include -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-8JZNN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-8JZNN');</script>
+<!-- End Google Tag Manager include -->
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="memberships">
+  <div class="standardview">
+	<div class="standardinfo" style>
+					
+						<span class="memberpic">
+					
+	                        	<a href="http://www.kenyancupid.com/photoDisplay.cfm?mID=201491&amp;ph1=1&amp;ph2=0&amp;ph3=0&amp;ph4=0&amp;ph5=0&amp;searchposition=1&amp;searchtotal=11&amp;fname=Catherine&amp;keepThis=true&amp;TB_iframe=true&amp;height=607&amp;width=700" name="Catherine  -  30  -  Dassa, Benin" class="thickbox">
+	                        
+	                        	<img border="0" height="136px" width="125px" src="search_list_files/20149100.jpg">
+	                        
+	                        </a>
+						
+					</span>
+					<div class="text">
+						<p class="hdg1">
+	                    
+	                    	<a href="http://www.kenyancupid.com/en/profile/showprofile/ID/201491?searchposition=1&amp;searchtotal=11">Catherine (30)</a>
+	                    
+	                    </p>
+				    <p><span class="hdg2">Who's gonna be my angel??</span>
+					    Dassa, 
+						
+						Collines, Benin
+	                    <br>
+					    <strong>Seeking:</strong> Male 31 - 47<br>
+				
+					    <strong>Last Login:</strong> 1 month ago</p>
+      </div>
+	                    
+					    <span class="icons">
+					    	<ul class="iconset">
+					    		
+	                            <li class="iconstandard">
+								
+	                            	<a href="http://www.kenyancupid.com/en/profile/showprofile/ID/201491?searchposition=1&amp;searchtotal=11" title="click here to view profile"></a>
+	                            
+	                            </li>
+								
+								
+	                                <li class="iconmail"><a href="http://www.kenyancupid.com/en/mail/showemail?mid=201491" title="Send Catherine mail" class="emailpopup" rel="201491" memname="Catherine"></a></li>
+	                            
+	                                <li class="iconinterest sendinterest" name="0D0782E2CDC829925684" data-altclass="iconinterestsent" data-msid="201491" data-imageurl="http://cdn.kenyancupid.com/memphoto/Photo1/small/201491.jpg" data-name="Catherine"><a href="http://www.kenyancupid.com/en/memberrelationship/showinterest/0D0782E2CDC829855684" title="Show interest in Catherine"></a></li>
+	                            
+	                                <li class="iconfavorites addfavorites" name="0D0782E2CDC829925684" data-altclass="iconfavoritessent" data-imageurl="http://cdn.kenyancupid.com/memphoto/Photo1/small/201491.jpg" data-name="Catherine"><a href="http://www.kenyancupid.com/en/memberrelationship/addfavorite/0D0782E2CDC829855684" title="Add Catherine to your favorites"></a></li>
+	                            
+	                                <li class="iconoffline">
+	                                
+	                                    <a href="javascript: void(0);" title="I'm Not Online"></a>
+	                                
+	                                </li>
+	                            
+							</ul>
+					    </span>	
+						
+	</div>
+  </div>
+                    
+                    
+					<div class="standardview">
+					<div class="standardinfo" style>
+					
+						<span class="memberpic">
+					
+	                        	<a href="http://www.kenyancupid.com/photoDisplay.cfm?mID=138502&amp;ph1=1&amp;ph2=0&amp;ph3=0&amp;ph4=0&amp;ph5=0&amp;searchposition=2&amp;searchtotal=11&amp;fname=jesmi&amp;keepThis=true&amp;TB_iframe=true&amp;height=607&amp;width=700" name="jesmi  -  27  -  Epe, Nigeria" class="thickbox">
+	                        
+	                        	<img border="0" height="136px" width="125px" src="search_list_files/13850200.jpg">
+	                        
+	                        </a>
+						
+					</span>
+					<div class="text">
+						<p class="hdg1">
+	                    
+	                    	<a href="http://www.kenyancupid.com/en/profile/showprofile/ID/138502?searchposition=2&amp;searchtotal=11">jesmi (27)</a>
+	                    
+	                    </p>
+				    <p><span class="hdg2">romance and dating</span>
+					    Epe, 
+						
+						Lagos
+	                    <br>
+					    <strong>Seeking:</strong> Male 29 - 47<br>
+				
+					    <strong>Last Login:</strong> 7 months ago</p>
+				      </div>
+	                    
+					    <span class="icons">
+					    	<ul class="iconset">
+					    		
+	                            <li class="iconstandard">
+								
+	                            	<a href="http://www.kenyancupid.com/en/profile/showprofile/ID/138502?searchposition=2&amp;searchtotal=11" title="click here to view profile"></a>
+	                            
+	                            </li>
+								
+								
+	                                <li class="iconmail"><a href="http://www.kenyancupid.com/en/mail/showemail?mid=138502" title="Send jesmi mail" class="emailpopup" rel="138502" memname="jesmi"></a></li>
+	                            
+	                                <li class="iconinterest sendinterest" name="0E048BE3C4CB29925684" data-altclass="iconinterestsent" data-msid="138502" data-imageurl="http://cdn.kenyancupid.com/memphoto/Photo1/small/138502.jpg" data-name="jesmi"><a href="http://www.kenyancupid.com/en/memberrelationship/showinterest/0E048BE3C4CB29855684" title="Show interest in jesmi"></a></li>
+	                            
+	                                <li class="iconfavorites addfavorites" name="0E048BE3C4CB29925684" data-altclass="iconfavoritessent" data-imageurl="http://cdn.kenyancupid.com/memphoto/Photo1/small/138502.jpg" data-name="jesmi"><a href="http://www.kenyancupid.com/en/memberrelationship/addfavorite/0E048BE3C4CB29855684" title="Add jesmi to your favorites"></a></li>
+	                            
+	                                <li class="iconoffline">
+	                                
+	                                    <a href="javascript: void(0);" title="I'm Not Online"></a>
+	                                
+	                                </li>
+	                            
+							</ul>
+					    </span>	
+						
+					</div>
+					</div>
+                    
+                    
+					<div class="standardview">
+					<div class="standardinfo" style>
+					
+						<span class="memberpic">
+					
+	                        	<a href="http://www.kenyancupid.com/photoDisplay.cfm?mID=82385&amp;ph1=1&amp;ph2=0&amp;ph3=0&amp;ph4=0&amp;ph5=0&amp;searchposition=3&amp;searchtotal=11&amp;fname=Sher&amp;keepThis=true&amp;TB_iframe=true&amp;height=607&amp;width=700" name="Sher  -  30  -  Lagos, Nigeria" class="thickbox">
+	                        
+	                        	<img border="0" height="136px" width="125px" src="search_list_files/82385000.jpg">
+	                        
+	                        </a>
+						
+					</span>
+					<div class="text">
+						<p class="hdg1">
+	                    
+	                    	<a href="http://www.kenyancupid.com/en/profile/showprofile/ID/82385?searchposition=3&amp;searchtotal=11">Sher (30)</a>
+	                    
+	                    </p>
+				    <p><span class="hdg2">Where have you been?i have been l...</span>
+					    Lagos, 
+						
+						Lagos
+	                    <br>
+					    <strong>Seeking:</strong> Male 32 - 53<br>
+				
+					    <strong>Last Login:</strong> over 12 months ago</p>
+				      </div>
+	                    
+					    <span class="icons">
+					    	<ul class="iconset">
+					    		
+	                            <li class="iconstandard">
+								
+	                            	<a href="http://www.kenyancupid.com/en/profile/showprofile/ID/82385?searchposition=3&amp;searchtotal=11" title="click here to view profile"></a>
+	                            
+	                            </li>
+								
+								
+	                                <li class="iconmail"><a href="http://www.kenyancupid.com/en/mail/showemail?mid=82385" title="Send Sher mail" class="emailpopup" rel="82385" memname="Sher"></a></li>
+	                            
+	                                <li class="iconinterest sendinterest" name="070580EEC1A60F814F" data-altclass="iconinterestsent" data-msid="82385" data-imageurl="http://cdn.kenyancupid.com/memphoto/Photo1/small/82385.jpg" data-name="Sher"><a href="http://www.kenyancupid.com/en/memberrelationship/showinterest/070580EEC1A618814F" title="Show interest in Sher"></a></li>
+	                            
+	                                <li class="iconfavorites addfavorites" name="070580EEC1A60F814F" data-altclass="iconfavoritessent" data-imageurl="http://cdn.kenyancupid.com/memphoto/Photo1/small/82385.jpg" data-name="Sher"><a href="http://www.kenyancupid.com/en/memberrelationship/addfavorite/070580EEC1A618814F" title="Add Sher to your favorites"></a></li>
+	                            
+	                                <li class="iconoffline">
+	                                
+	                                    <a href="javascript: void(0);" title="I'm Not Online"></a>
+	                                
+	                                </li>
+	                            
+							</ul>
+					    </span>	
+						
+					</div>
+					</div>
+                    
+                    
+					<div class="standardview">
+					<div class="standardinfo" style>
+					
+						<span class="memberpic">
+					
+	                        	<a href="http://www.kenyancupid.com/photoDisplay.cfm?mID=25333&amp;ph1=1&amp;ph2=1&amp;ph3=0&amp;ph4=0&amp;ph5=0&amp;searchposition=4&amp;searchtotal=11&amp;fname=Annie&amp;keepThis=true&amp;TB_iframe=true&amp;height=607&amp;width=700" name="Annie  -  30  -  Lagos, Nigeria" class="thickbox">
+	                        
+	                            <div class="photo">
+                                   <p>2</p>
+	                            </div>
+	                    	</a>
+	                    
+	                        	<a href="http://www.kenyancupid.com/photoDisplay.cfm?mID=25333&amp;ph1=1&amp;ph2=1&amp;ph3=0&amp;ph4=0&amp;ph5=0&amp;searchposition=4&amp;searchtotal=11&amp;fname=Annie&amp;keepThis=true&amp;TB_iframe=true&amp;height=607&amp;width=700" name="Annie  -  30  -  Lagos, Nigeria" class="thickbox">
+	                        
+	                        	<img border="0" height="136px" width="125px" src="search_list_files/25333000.jpg">
+	                        
+	                        </a>
+						
+					</span>
+					<div class="text">
+						<p class="hdg1">
+	                    
+	                    	<a href="http://www.kenyancupid.com/en/profile/showprofile/ID/25333?searchposition=4&amp;searchtotal=11">Annie (30)</a>
+	                    
+	                    </p>
+				    <p><span class="hdg2">Nothing But True Hearts.</span>
+					    Lagos, 
+						
+						Lagos
+	                    <br>
+					    <strong>Seeking:</strong> Male 35 - 45<br>
+				
+					    <strong>Last Login:</strong> over 12 months ago</p>
+				      </div>
+	                    
+					    <span class="icons">
+					    	<ul class="iconset">
+					    		
+	                            <li class="iconstandard">
+								
+	                            	<a href="http://www.kenyancupid.com/en/profile/showprofile/ID/25333?searchposition=4&amp;searchtotal=11" title="click here to view profile"></a>
+	                            
+	                            </li>
+								
+								
+	                                <li class="iconmail"><a href="http://www.kenyancupid.com/en/mail/showemail?mid=25333" title="Send Annie mail" class="emailpopup" rel="25333" memname="Annie"></a></li>
+	                            
+	                                <li class="iconinterest sendinterest" name="0D0280E5C7A60F814F" data-altclass="iconinterestsent" data-msid="25333" data-imageurl="http://cdn.kenyancupid.com/memphoto/Photo1/small/25333.jpg" data-name="Annie"><a href="http://www.kenyancupid.com/en/memberrelationship/showinterest/0D0280E5C7A618814F" title="Show interest in Annie"></a></li>
+	                            
+	                                <li class="iconfavorites addfavorites" name="0D0280E5C7A60F814F" data-altclass="iconfavoritessent" data-imageurl="http://cdn.kenyancupid.com/memphoto/Photo1/small/25333.jpg" data-name="Annie"><a href="http://www.kenyancupid.com/en/memberrelationship/addfavorite/0D0280E5C7A618814F" title="Add Annie to your favorites"></a></li>
+	                            
+	                                <li class="iconoffline">
+	                                
+	                                    <a href="javascript: void(0);" title="I'm Not Online"></a>
+	                                
+	                                </li>
+	                            
+							</ul>
+					    </span>	
+						
+					</div>
+					</div>
+                    
+                    
+					<div class="standardview">
+					<div class="standardinfo" style>
+					
+						<span class="memberpic">
+					
+	                        	<a href="http://www.kenyancupid.com/photoDisplay.cfm?mID=59932&amp;ph1=1&amp;ph2=1&amp;ph3=1&amp;ph4=1&amp;ph5=0&amp;searchposition=5&amp;searchtotal=11&amp;fname=Kelna&amp;keepThis=true&amp;TB_iframe=true&amp;height=607&amp;width=700" name="Kelna  -  23  -  Yaoundé, Cameroon" class="thickbox">
+	                        
+	                            <div class="photo">
+                                   <p>4</p>
+	                            </div>
+	                    	</a>
+	                    
+	                        	<a href="http://www.kenyancupid.com/photoDisplay.cfm?mID=59932&amp;ph1=1&amp;ph2=1&amp;ph3=1&amp;ph4=1&amp;ph5=0&amp;searchposition=5&amp;searchtotal=11&amp;fname=Kelna&amp;keepThis=true&amp;TB_iframe=true&amp;height=607&amp;width=700" name="Kelna  -  23  -  Yaoundé, Cameroon" class="thickbox">
+	                        
+	                        	<img border="0" height="136px" width="125px" src="search_list_files/59932000.jpg">
+	                        
+	                        </a>
+						
+					</span>
+					<div class="text">
+						<p class="hdg1">
+	                    
+	                    	<a href="http://www.kenyancupid.com/en/profile/showprofile/ID/59932?searchposition=5&amp;searchtotal=11">Kelna (23)</a>
+	                    
+	                    </p>
+				    <p><span class="hdg2">iam what you want.....</span>
+					    Yaoundé, 
+						
+						Centre, Cameroon
+	                    <br>
+					    <strong>Seeking:</strong> Male 26 - 43<br>
+				
+					    <strong>Last Login:</strong> over 12 months ago</p>
+				      </div>
+	                    
+					    <span class="icons">
+					    	<ul class="iconset">
+					    		
+	                            <li class="iconstandard">
+								
+	                            	<a href="http://www.kenyancupid.com/en/profile/showprofile/ID/59932?searchposition=5&amp;searchtotal=11" title="click here to view profile"></a>
+	                            
+	                            </li>
+								
+								
+	                                <li class="iconmail"><a href="http://www.kenyancupid.com/en/mail/showemail?mid=59932" title="Send Kelna mail" class="emailpopup" rel="59932" memname="Kelna"></a></li>
+	                            
+	                                <li class="iconinterest sendinterest" name="0A0E8AE5C6A60F814F" data-altclass="iconinterestsent" data-msid="59932" data-imageurl="http://cdn.kenyancupid.com/memphoto/Photo1/small/59932.jpg" data-name="Kelna"><a href="http://www.kenyancupid.com/en/memberrelationship/showinterest/0A0E8AE5C6A618814F" title="Show interest in Kelna"></a></li>
+	                            
+	                                <li class="iconfavorites addfavorites" name="0A0E8AE5C6A60F814F" data-altclass="iconfavoritessent" data-imageurl="http://cdn.kenyancupid.com/memphoto/Photo1/small/59932.jpg" data-name="Kelna"><a href="http://www.kenyancupid.com/en/memberrelationship/addfavorite/0A0E8AE5C6A618814F" title="Add Kelna to your favorites"></a></li>
+	                            
+	                                <li class="iconoffline">
+	                                
+	                                    <a href="javascript: void(0);" title="I'm Not Online"></a>
+	                                
+	                                </li>
+	                            
+							</ul>
+					    </span>	
+						
+					</div>
+					</div>
+                    
+                    
+					<div class="standardview">
+					<div class="standardinfo" style>
+					
+						<span class="memberpic">
+					
+	                        	<a href="http://www.kenyancupid.com/photoDisplay.cfm?mID=55313&amp;ph1=1&amp;ph2=1&amp;ph3=1&amp;ph4=1&amp;ph5=0&amp;searchposition=6&amp;searchtotal=11&amp;fname=Jamillah&amp;keepThis=true&amp;TB_iframe=true&amp;height=607&amp;width=700" name="Jamillah  -  40  -  Abeokuta, Nigeria" class="thickbox">
+	                        
+	                            <div class="photo">
+                                   <p>4</p>
+	                            </div>
+	                    	</a>
+	                    
+	                        	<a href="http://www.kenyancupid.com/photoDisplay.cfm?mID=55313&amp;ph1=1&amp;ph2=1&amp;ph3=1&amp;ph4=1&amp;ph5=0&amp;searchposition=6&amp;searchtotal=11&amp;fname=Jamillah&amp;keepThis=true&amp;TB_iframe=true&amp;height=607&amp;width=700" name="Jamillah  -  40  -  Abeokuta, Nigeria" class="thickbox">
+	                        
+	                        	<img border="0" height="136px" width="125px" src="search_list_files/55313000.jpg">
+	                        
+	                        </a>
+						
+					</span>
+					<div class="text">
+						<p class="hdg1">
+	                    
+	                    	<a href="http://www.kenyancupid.com/en/profile/showprofile/ID/55313?searchposition=6&amp;searchtotal=11">Jamillah (40)</a>
+	                    
+	                    </p>
+				    <p><span class="hdg2">If you must do something, do it n...</span>
+					    Abeokuta, 
+						
+						Ogun
+	                    <br>
+					    <strong>Seeking:</strong> Male 39 - 55<br>
+				
+					    <strong>Last Login:</strong> over 12 months ago</p>
+				      </div>
+	                    
+					    <span class="icons">
+					    	<ul class="iconset">
+					    		
+	                            <li class="iconstandard">
+								
+	                            	<a href="http://www.kenyancupid.com/en/profile/showprofile/ID/55313?searchposition=6&amp;searchtotal=11" title="click here to view profile"></a>
+	                            
+	                            </li>
+								
+								
+	                                <li class="iconmail"><a href="http://www.kenyancupid.com/en/mail/showemail?mid=55313" title="Send Jamillah mail" class="emailpopup" rel="55313" memname="Jamillah"></a></li>
+	                            
+	                                <li class="iconinterest sendinterest" name="0A0280E7C7A60F814F" data-altclass="iconinterestsent" data-msid="55313" data-imageurl="http://cdn.kenyancupid.com/memphoto/Photo1/small/55313.jpg" data-name="Jamillah"><a href="http://www.kenyancupid.com/en/memberrelationship/showinterest/0A0280E7C7A618814F" title="Show interest in Jamillah"></a></li>
+	                            
+	                                <li class="iconfavorites addfavorites" name="0A0280E7C7A60F814F" data-altclass="iconfavoritessent" data-imageurl="http://cdn.kenyancupid.com/memphoto/Photo1/small/55313.jpg" data-name="Jamillah"><a href="http://www.kenyancupid.com/en/memberrelationship/addfavorite/0A0280E7C7A618814F" title="Add Jamillah to your favorites"></a></li>
+	                            
+	                                <li class="iconoffline">
+	                                
+	                                    <a href="javascript: void(0);" title="I'm Not Online"></a>
+	                                
+	                                </li>
+	                            
+							</ul>
+					    </span>	
+						
+					</div>
+					</div>
+                    
+                    
+					<div class="standardview">
+					<div class="standardinfo" style>
+					
+						<span class="memberpic">
+					
+	                        	<a href="http://www.kenyancupid.com/photoDisplay.cfm?mID=19981&amp;ph1=1&amp;ph2=0&amp;ph3=0&amp;ph4=0&amp;ph5=0&amp;searchposition=7&amp;searchtotal=11&amp;fname=Ejiro&amp;keepThis=true&amp;TB_iframe=true&amp;height=607&amp;width=700" name="Ejiro  -  30  -  Warri, Nigeria" class="thickbox">
+	                        
+	                        	<img border="0" height="136px" width="125px" src="search_list_files/19981000.jpg">
+	                        
+	                        </a>
+						
+					</span>
+					<div class="text">
+						<p class="hdg1">
+	                    
+	                    	<a href="http://www.kenyancupid.com/en/profile/showprofile/ID/19981?searchposition=7&amp;searchtotal=11">Ejiro (30)</a>
+	                    
+	                    </p>
+				    <p><span class="hdg2">Heart 2 Heart</span>
+					    Warri, 
+						
+						Delta
+	                    <br>
+					    <strong>Seeking:</strong> Male 32 - 60<br>
+				
+					    <strong>Last Login:</strong> over 12 months ago</p>
+				      </div>
+	                    
+					    <span class="icons">
+					    	<ul class="iconset">
+					    		
+	                            <li class="iconstandard">
+								
+	                            	<a href="http://www.kenyancupid.com/en/profile/showprofile/ID/19981?searchposition=7&amp;searchtotal=11" title="click here to view profile"></a>
+	                            
+	                            </li>
+								
+								
+	                                <li class="iconmail"><a href="http://www.kenyancupid.com/en/mail/showemail?mid=19981" title="Send Ejiro mail" class="emailpopup" rel="19981" memname="Ejiro"></a></li>
+	                            
+	                                <li class="iconinterest sendinterest" name="0E0E8AEEC5A60F814F" data-altclass="iconinterestsent" data-msid="19981" data-imageurl="http://cdn.kenyancupid.com/memphoto/Photo1/small/19981.jpg" data-name="Ejiro"><a href="http://www.kenyancupid.com/en/memberrelationship/showinterest/0E0E8AEEC5A618814F" title="Show interest in Ejiro"></a></li>
+	                            
+	                                <li class="iconfavorites addfavorites" name="0E0E8AEEC5A60F814F" data-altclass="iconfavoritessent" data-imageurl="http://cdn.kenyancupid.com/memphoto/Photo1/small/19981.jpg" data-name="Ejiro"><a href="http://www.kenyancupid.com/en/memberrelationship/addfavorite/0E0E8AEEC5A618814F" title="Add Ejiro to your favorites"></a></li>
+	                            
+	                                <li class="iconoffline">
+	                                
+	                                    <a href="javascript: void(0);" title="I'm Not Online"></a>
+	                                
+	                                </li>
+	                            
+							</ul>
+					    </span>	
+						
+					</div>
+					</div>
+                    
+                    
+					<div class="standardview">
+					<div class="standardinfo" style>
+					
+						<span class="memberpic">
+					
+	                        	<a href="http://www.kenyancupid.com/photoDisplay.cfm?mID=50324&amp;ph1=1&amp;ph2=1&amp;ph3=0&amp;ph4=0&amp;ph5=0&amp;searchposition=8&amp;searchtotal=11&amp;fname=jennifer&amp;keepThis=true&amp;TB_iframe=true&amp;height=607&amp;width=700" name="jennifer  -  24  -  Abuja, Nigeria" class="thickbox">
+	                        
+	                            <div class="photo">
+                                   <p>2</p>
+	                            </div>
+	                    	</a>
+	                    
+	                        	<a href="http://www.kenyancupid.com/photoDisplay.cfm?mID=50324&amp;ph1=1&amp;ph2=1&amp;ph3=0&amp;ph4=0&amp;ph5=0&amp;searchposition=8&amp;searchtotal=11&amp;fname=jennifer&amp;keepThis=true&amp;TB_iframe=true&amp;height=607&amp;width=700" name="jennifer  -  24  -  Abuja, Nigeria" class="thickbox">
+	                        
+	                        	<img border="0" height="136px" width="125px" src="search_list_files/50324000.jpg">
+	                        
+	                        </a>
+						
+					</span>
+					<div class="text">
+						<p class="hdg1">
+	                    
+	                    	<a href="http://www.kenyancupid.com/en/profile/showprofile/ID/50324?searchposition=8&amp;searchtotal=11">jennifer (24)</a>
+	                    
+	                    </p>
+				    <p><span class="hdg2">Hi..</span>
+					    Abuja, 
+						
+						Federal Capital Territory
+	                    <br>
+					    <strong>Seeking:</strong> Male 35 - 43<br>
+				
+					    <strong>Last Login:</strong> over 12 months ago</p>
+				      </div>
+	                    
+					    <span class="icons">
+					    	<ul class="iconset">
+					    		
+	                            <li class="iconstandard">
+								
+	                            	<a href="http://www.kenyancupid.com/en/profile/showprofile/ID/50324?searchposition=8&amp;searchtotal=11" title="click here to view profile"></a>
+	                            
+	                            </li>
+								
+								
+	                                <li class="iconmail"><a href="http://www.kenyancupid.com/en/mail/showemail?mid=50324" title="Send jennifer mail" class="emailpopup" rel="50324" memname="jennifer"></a></li>
+	                            
+	                                <li class="iconinterest sendinterest" name="0A0780E4C0A60F814F" data-altclass="iconinterestsent" data-msid="50324" data-imageurl="http://cdn.kenyancupid.com/memphoto/Photo1/small/50324.jpg" data-name="jennifer"><a href="http://www.kenyancupid.com/en/memberrelationship/showinterest/0A0780E4C0A618814F" title="Show interest in jennifer"></a></li>
+	                            
+	                                <li class="iconfavorites addfavorites" name="0A0780E4C0A60F814F" data-altclass="iconfavoritessent" data-imageurl="http://cdn.kenyancupid.com/memphoto/Photo1/small/50324.jpg" data-name="jennifer"><a href="http://www.kenyancupid.com/en/memberrelationship/addfavorite/0A0780E4C0A618814F" title="Add jennifer to your favorites"></a></li>
+	                            
+	                                <li class="iconoffline">
+	                                
+	                                    <a href="javascript: void(0);" title="I'm Not Online"></a>
+	                                
+	                                </li>
+	                            
+							</ul>
+					    </span>	
+						
+					</div>
+					</div>
+                    
+                    
+					<div class="standardview">
+					<div class="standardinfo" style>
+					
+						<span class="memberpic">
+					
+	                        	<a href="http://www.kenyancupid.com/photoDisplay.cfm?mID=42865&amp;ph1=1&amp;ph2=1&amp;ph3=0&amp;ph4=0&amp;ph5=0&amp;searchposition=9&amp;searchtotal=11&amp;fname=saasy&amp;keepThis=true&amp;TB_iframe=true&amp;height=607&amp;width=700" name="saasy  -  20  -  Niamey, Niger" class="thickbox">
+	                        
+	                            <div class="photo">
+                                   <p>2</p>
+	                            </div>
+	                    	</a>
+	                    
+	                        	<a href="http://www.kenyancupid.com/photoDisplay.cfm?mID=42865&amp;ph1=1&amp;ph2=1&amp;ph3=0&amp;ph4=0&amp;ph5=0&amp;searchposition=9&amp;searchtotal=11&amp;fname=saasy&amp;keepThis=true&amp;TB_iframe=true&amp;height=607&amp;width=700" name="saasy  -  20  -  Niamey, Niger" class="thickbox">
+	                        
+	                        	<img border="0" height="136px" width="125px" src="search_list_files/42865000.jpg">
+	                        
+	                        </a>
+						
+					</span>
+					<div class="text">
+						<p class="hdg1">
+	                    
+	                    	<a href="http://www.kenyancupid.com/en/profile/showprofile/ID/42865?searchposition=9&amp;searchtotal=11">saasy (20)</a>
+	                    
+	                    </p>
+				    <p><span class="hdg2">je m'aire vs connaitre bien</span>
+					    Niamey, 
+						
+						Niamey, Niger
+	                    <br>
+					    <strong>Seeking:</strong> Male 18 - 19<br>
+				
+					    <strong>Last Login:</strong> over 12 months ago</p>
+				      </div>
+	                    
+					    <span class="icons">
+					    	<ul class="iconset">
+					    		
+	                            <li class="iconstandard">
+								
+	                            	<a href="http://www.kenyancupid.com/en/profile/showprofile/ID/42865?searchposition=9&amp;searchtotal=11" title="click here to view profile"></a>
+	                            
+	                            </li>
+								
+								
+	                                <li class="iconmail"><a href="http://www.kenyancupid.com/en/mail/showemail?mid=42865" title="Send saasy mail" class="emailpopup" rel="42865" memname="saasy"></a></li>
+	                            
+	                                <li class="iconinterest sendinterest" name="0B058BE0C1A60F814F" data-altclass="iconinterestsent" data-msid="42865" data-imageurl="http://cdn.kenyancupid.com/memphoto/Photo1/small/42865.jpg" data-name="saasy"><a href="http://www.kenyancupid.com/en/memberrelationship/showinterest/0B058BE0C1A618814F" title="Show interest in saasy"></a></li>
+	                            
+	                                <li class="iconfavorites addfavorites" name="0B058BE0C1A60F814F" data-altclass="iconfavoritessent" data-imageurl="http://cdn.kenyancupid.com/memphoto/Photo1/small/42865.jpg" data-name="saasy"><a href="http://www.kenyancupid.com/en/memberrelationship/addfavorite/0B058BE0C1A618814F" title="Add saasy to your favorites"></a></li>
+	                            
+	                                <li class="iconoffline">
+	                                
+	                                    <a href="javascript: void(0);" title="I'm Not Online"></a>
+	                                
+	                                </li>
+	                            
+							</ul>
+					    </span>	
+						
+					</div>
+					</div>
+                    
+                    
+  <div class="standardview">
+					<div class="standardinfo" style>
+					
+						<span class="memberpic">
+					
+	                        	<a href="http://www.kenyancupid.com/photoDisplay.cfm?mID=41934&amp;ph1=1&amp;ph2=0&amp;ph3=0&amp;ph4=0&amp;ph5=0&amp;searchposition=10&amp;searchtotal=11&amp;fname=ngozi&amp;keepThis=true&amp;TB_iframe=true&amp;height=607&amp;width=700" name="ngozi  -  25  -  Port Harcourt, Nigeria" class="thickbox">
+	                        
+	                        	<img border="0" height="136px" width="125px" src="search_list_files/41934000.jpg">
+	                        
+	                        </a>
+						
+					</span>
+					<div class="text">
+						<p class="hdg1">
+	                    
+	                    	<a href="http://www.kenyancupid.com/en/profile/showprofile/ID/41934?searchposition=10&amp;searchtotal=11">ngozi (25)</a>
+	                    
+	                    </p>
+				    <p><span class="hdg2">in search of my heart beat.</span>
+					    Port Harcourt, 
+						
+						Rivers
+	                    <br>
+					    <strong>Seeking:</strong> Male 25 - 70<br>
+				
+					    <strong>Last Login:</strong> over 12 months ago</p>
+				      </div>
+	                    
+					    <span class="icons">
+					    	<ul class="iconset">
+					    		
+	                            <li class="iconstandard">
+								
+	                            	<a href="http://www.kenyancupid.com/en/profile/showprofile/ID/41934?searchposition=10&amp;searchtotal=11" title="click here to view profile"></a>
+	                            
+	                            </li>
+								
+								
+	                                <li class="iconmail"><a href="http://www.kenyancupid.com/en/mail/showemail?mid=41934" title="Send ngozi mail" class="emailpopup" rel="41934" memname="ngozi"></a></li>
+	                            
+	                                <li class="iconinterest sendinterest" name="0B068AE5C0A60F814F" data-altclass="iconinterestsent" data-msid="41934" data-imageurl="http://cdn.kenyancupid.com/memphoto/Photo1/small/41934.jpg" data-name="ngozi"><a href="http://www.kenyancupid.com/en/memberrelationship/showinterest/0B068AE5C0A618814F" title="Show interest in ngozi"></a></li>
+	                            
+	                                <li class="iconfavorites addfavorites" name="0B068AE5C0A60F814F" data-altclass="iconfavoritessent" data-imageurl="http://cdn.kenyancupid.com/memphoto/Photo1/small/41934.jpg" data-name="ngozi"><a href="http://www.kenyancupid.com/en/memberrelationship/addfavorite/0B068AE5C0A618814F" title="Add ngozi to your favorites"></a></li>
+	                            
+	                                <li class="iconoffline">
+	                                
+	                                    <a href="javascript: void(0);" title="I'm Not Online"></a>
+	                                
+	                                </li>
+	                            
+							</ul>
+					    </span>	
+						
+					</div>
+					</div>
+					<div class="standardview">
+					<div class="standardinfo" style>
+					
+						<span class="memberpic">
+					
+	                        	<a href="http://www.kenyancupid.com/photoDisplay.cfm?mID=35786&amp;ph1=1&amp;ph2=1&amp;ph3=0&amp;ph4=0&amp;ph5=0&amp;searchposition=11&amp;searchtotal=11&amp;fname=Tyna&amp;keepThis=true&amp;TB_iframe=true&amp;height=607&amp;width=700" name="Tyna  -  30  -  Lagos, Nigeria" class="thickbox">
+	                        
+	                            <div class="photo">
+                                   <p>2</p>
+	                            </div>
+	                    	</a>
+	                    
+	                        	<a href="http://www.kenyancupid.com/photoDisplay.cfm?mID=35786&amp;ph1=1&amp;ph2=1&amp;ph3=0&amp;ph4=0&amp;ph5=0&amp;searchposition=11&amp;searchtotal=11&amp;fname=Tyna&amp;keepThis=true&amp;TB_iframe=true&amp;height=607&amp;width=700" name="Tyna  -  30  -  Lagos, Nigeria" class="thickbox">
+	                        
+	                        	<img border="0" height="136px" width="125px" src="search_list_files/35786000.jpg">
+	                        
+	                        </a>
+						
+					</span>
+					<div class="text">
+						<p class="hdg1">
+	                    
+	                    	<a href="http://www.kenyancupid.com/en/profile/showprofile/ID/35786?searchposition=11&amp;searchtotal=11">Tyna (30)</a>
+	                    
+	                    </p>
+				    <p><span class="hdg2">Hoping to find love again...</span>
+					    Lagos, 
+						
+						Lagos
+	                    <br>
+					    <strong>Seeking:</strong> Male 30 - 45<br>
+				
+					    <strong>Last Login:</strong> over 12 months ago</p>
+				      </div>
+	                    
+					    <span class="icons">
+					    	<ul class="iconset">
+					    		
+	                            <li class="iconstandard">
+								
+	                            	<a href="http://www.kenyancupid.com/en/profile/showprofile/ID/35786?searchposition=11&amp;searchtotal=11" title="click here to view profile"></a>
+	                            
+	                            </li>
+								
+								
+	                                <li class="iconmail"><a href="http://www.kenyancupid.com/en/mail/showemail?mid=35786" title="Send Tyna mail" class="emailpopup" rel="35786" memname="Tyna"></a></li>
+	                            
+	                                <li class="iconinterest sendinterest" name="0C0284EEC2A60F814F" data-altclass="iconinterestsent" data-msid="35786" data-imageurl="http://cdn.kenyancupid.com/memphoto/Photo1/small/35786.jpg" data-name="Tyna"><a href="http://www.kenyancupid.com/en/memberrelationship/showinterest/0C0284EEC2A618814F" title="Show interest in Tyna"></a></li>
+	                            
+	                                <li class="iconfavorites addfavorites" name="0C0284EEC2A60F814F" data-altclass="iconfavoritessent" data-imageurl="http://cdn.kenyancupid.com/memphoto/Photo1/small/35786.jpg" data-name="Tyna"><a href="http://www.kenyancupid.com/en/memberrelationship/addfavorite/0C0284EEC2A618814F" title="Add Tyna to your favorites"></a></li>
+	                            
+	                                <li class="iconoffline">
+	                                
+	                                    <a href="javascript: void(0);" title="I'm Not Online"></a>
+	                                
+	                                </li>
+	                            
+							</ul>
+					    </span>	
+						
+					</div>
+  </div>
+                    
+                    
+				<div class="clear"></div>
+</div>
+</body>
+
+
+</html>
+
+<!-- This document saved from http://www.kenyancupid.com/en/results/search?searchtype=1 -->

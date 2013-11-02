@@ -1,0 +1,6 @@
+#regologin {padding-bottom:10px;background:url(bg-regol.gif) repeat-x;text-align:center;}
+#regologin h1 {padding:20px 0 0;color:#081f32;font-size:20px;}
+#regologin h2 {padding:5px 0;color:#000;}
+#regoLoginDetails {margin:15px auto;padding:10px;width:400px;border:1px solid #aaa;-webkit-border-radius:7px;-moz-border-radius:7px;border-radius:7px;background-color:#fff;}
+.login {padding:5px 0;font-size:11px;}
+.banner {padding:20px 5px 5px;}
