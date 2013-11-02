@@ -65,6 +65,11 @@
 <%@ page import="java.sql.Statement"%>
 <%@ page import="java.sql.ResultSetMetaData"%>
 
+<%@ page import="org.joda.time.DateMidnight"%>
+<%@ page import="org.joda.time.DateTime"%>
+<%@ page import="org.joda.time.Years"%>
+
+
 <%! public Connection cn = null; %>
 <%
 //Class.forName("org.apache.derby.jdbc.EmbeddedDriver").newInstance();
@@ -80,7 +85,7 @@ String [] pn2 = {"age", "appearance", "bestFeature", "birthdate", "birthdate_day
 
 <%! String s_f="", s_w=""; //String profileid="", userid="", blobkey="", firstname="", gender="", lastname="", mobileno="", password="", username="", age="", photoid=""; %>
 <%! String country="", dob="", email="", datereg="", age="", appearance="", bestFeature="", birthdate="", birthdate_day="", birthdate_month="", birthdate_year="", blobkey="", bodyArt="", bodyStyle="", childrenHave="", childrenNumber="", childrenOldest="", childrenWant="", childrenYoungest="", cityLive="", complexion="", countryLive="", drink="", education="", employmentStatus="", englishAbility="", ethnicity="", eyeColor="", eyeWear="", facialHair="", firstName="", firstname="", gender="", hairColor="", hairLength="", hairType="", height="", homeType="", incomeBracket="", incomeCurrency="", languageSpoken="", lastName="", lastname="", livingSituation="", maritalStatus="", mobileno="", nationality="", occupation="", password="", petsHave="", polygamy="", profilebtn="", profileid="", religion="", relocate="", resetCurrency="", smoke="", starSign="", stateLive="", tribe="", userid="", username="", weight=""; %>
-
+<%! int age2=0; %>
 <%! String path = "", date=""; %>
 <% try { path = request.getParameter("p").substring(0, 8); } catch(Exception e1) { } %>
 
@@ -599,12 +604,13 @@ if(request.getParameter("login") != null) {
 
 	out +="<div id='main' class='clearfix'><div id='main2'><div class='inner'><h1 class='title'>Search Members</h1>";
 	
-	out +="<form id='form1' name='form1' method='post' action=''>Search User By:<label>"+
+	out +="<form id='form1' name='form1' method='post' action='?p=searchlist'>Search User By:<label>"+
+	
+	"<select name='tp' id='tp'><option value='USERS'>USERS</option><option value='PROFILE'>PROFILE</option></select>"+
+			
 	  "<select name='fl' id='fl'><option value='--' >-Select-</option>";
 	  
-	  for(String st: sb) {
-		  out +="<option value='"+st+"' >"+st+"</option>";
-	  }
+	  for(String st: sb) { out +="<option value='"+st+"' >"+st+"</option>"; }
     
 
     
@@ -640,28 +646,42 @@ if(srch!=null)	{
 
 <%
 if(request.getParameter("search") != null) {
+	String tp = request.getParameter("tp");
 	String fl = request.getParameter("fl");
 	String w = request.getParameter("w");
-	srch = fl+"="+w;
-	session.setAttribute("fl", fl);
-	session.setAttribute("w", w);
 	
-	session.setAttribute("s_f", fl);
-	session.setAttribute("s_w", w);
+	out.println("Searches1:"+tp+":"+fl+"="+w);
+
+	try {
+	Query q1 =  new Query(tp);
+	q1.addFilter(fl, Query.FilterOperator.EQUAL, w);
+	PreparedQuery pq = ds.prepare(q1);
+	Entity pn  = pq.asSingleEntity();			
+	String usr = pn.getProperty("username").toString();
+	System.out.println("nasamo="+usr);
+	uid = pn.getKey().getId()+"";
+	} catch(Exception e4) { System.out.println(e4); }
+    /**
 	
-	System.out.println("Searches:"+s_f+"="+s_w);
+//	srch = fl+"="+w;
+//	session.setAttribute("fl", fl);
+//	session.setAttribute("w", w);
 	
-	
-	
+//	session.setAttribute("s_f", fl);
+//	session.setAttribute("s_w", w);
+try {	
 	Query q = new Query("PROFILE");
 	q.addFilter(fl, Query.FilterOperator.EQUAL, w);
-    PreparedQuery pq = ds.prepare(q);  
+    PreparedQuery pq = ds.prepare(q); 
+} catch(Exception e4) { System.out.println(e4); }
+    
+
 for (Entity result : pq.asIterable()) {   
    String blobkey = (String) result.getProperty("blobkey");
    srch = blobkey;
    System.out.println("babyna="+srch);
 	}
-
+*/
 }
 
 %>
@@ -703,3 +723,36 @@ for (Entity result : pq.asIterable()) {
 
 %>
 
+
+<%! public String searchlist(String user) {
+	String out = "";
+			out +="<div id='main' class='clearfix' ><div class='inner'><h1 class='title'>Search Members</h1>"+			
+			"<link type='text/css' rel='stylesheet' href='/k/global00.css'>"+
+			"<link type='text/css' rel='stylesheet' href='/k/searchre.css'>"+
+			"<div class='standardview'><div class='standardinfo' style>"+
+			"<span class='memberpic'><a href='#' name='Tyna  -  30  -  Lagos, Nigeria' class='thickbox'>"+
+			"<div class='photo'><p>2</p></div></a>"+                   
+			"<a href='#' name='Tyna  -  30  -  Lagos, Nigeria' class='thickbox'>"+
+			"<img border='0' height='136px' width='125px' src='search_list_files/35786000.jpg'></a></span>"+
+			"<div class='text'><p class='hdg1'><a href='#'>Tyna (30)</a></p>"+
+			"<p><span class='hdg2'>Hoping to find love again...</span>Lagos, Lagos<br>"+
+			"<strong>Seeking:</strong> Male 30 - 45<br>"+
+			"<strong>Last Login:</strong> over 12 months ago</p>"+
+			"<br><a href='#'>View Profile</a>"+
+			"</div></div></div><div class='clear'></div>";
+			out +="</div></div>";
+	return out; }
+%>
+
+<%! public int getAge(int y, int m, int d) {
+	DateMidnight birthdate = new DateMidnight(y, m, d);
+	DateTime now = new DateTime();
+	Years age = Years.yearsBetween(birthdate, now);		
+	String ag = age+"";		
+	int str = Integer.parseInt(ag.replaceAll("\\D+",""));		
+	
+	return str;
+	
+}
+
+%>

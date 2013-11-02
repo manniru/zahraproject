@@ -88,8 +88,8 @@
 <% if(request.getParameter("p") != null && request.getParameter("p").equalsIgnoreCase("upload")) { %><%@include file="_upload.jsp" %><% } %>
 <% if(request.getParameter("p") != null && request.getParameter("p").equalsIgnoreCase("message")) { %><%@include file="_message.jsp" %><% } %>
 
-<% if(request.getParameter("p") != null && request.getParameter("p").equalsIgnoreCase("search")) { %>
-<%= search(user) %><% } %>
+<% if(request.getParameter("p") != null && request.getParameter("p").equalsIgnoreCase("search")) { %><%= search(user) %><% } %>
+<% if(request.getParameter("p") != null && request.getParameter("p").equalsIgnoreCase("searchlist")) { %><%@include file="searchlist.jsp" %><% } %>
 
 
 <div id="sidebar-right" class="clearfix">

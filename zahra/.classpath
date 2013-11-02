@@ -9,5 +9,6 @@
 	<classpathentry kind="lib" path="war/WEB-INF/lib/derbynet-10.10.1.1.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/jetty-6.1.26.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/jetty-util-6.1.26.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/joda-time-2.3.jar"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>
