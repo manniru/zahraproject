@@ -12,8 +12,10 @@
 <%@ page import="com.google.appengine.api.blobstore.BlobstoreServiceFactory" %>
 <%@ page import="com.google.appengine.api.blobstore.BlobstoreService" %>
 
+<% //out.println("uid:"+uid); %>
 
 <% // Get Entity
+
 int ui = Integer.parseInt(uid);
 try {
 Key ky = KeyFactory.createKey("USERS", ui);
@@ -30,54 +32,57 @@ email = 	e1.getProperty("email").toString();
 datereg = 	e1.getProperty("datereg").toString();
 } catch(Exception e) { System.out.println(e); }
 
-try { Query q1 =  new Query("PROFILE");
-q1.addFilter("userid", Query.FilterOperator.EQUAL, uid);
-PreparedQuery pq = ds.prepare(q1);
-Entity pn  = pq.asSingleEntity();
-profileid = pn.getKey().getId()+"";
-userid = pn.getProperty("userid").toString();
 
-blobkey = pn.getProperty("blobkey").toString();
-hairType = pn.getProperty("hairType").toString();
-eyeWear = pn.getProperty("eyeWear").toString();
-appearance = pn.getProperty("appearance").toString();
-weight = pn.getProperty("weight").toString();
-//userid = pn.getProperty("userid").toString();
-lastname = pn.getProperty("lastname").toString();
-hairColor = pn.getProperty("hairColor").toString();
-education = pn.getProperty("education").toString();
-maritalStatus = pn.getProperty("maritalStatus").toString();
-password = pn.getProperty("password").toString();
-//profileid = pn.getProperty("profileid").toString();
-religion = pn.getProperty("religion").toString();
-facialHair = pn.getProperty("facialHair").toString();
-username = pn.getProperty("username").toString();
-height = pn.getProperty("height").toString();
-polygamy = pn.getProperty("polygamy").toString();
-englishAbility = pn.getProperty("englishAbility").toString();
-drink = pn.getProperty("drink").toString();
-livingSituation = pn.getProperty("livingSituation").toString();
-gender = pn.getProperty("gender").toString();
-bodyStyle = pn.getProperty("bodyStyle").toString();
-occupation = pn.getProperty("occupation").toString();
-tribe = pn.getProperty("tribe").toString();
-childrenHave = pn.getProperty("childrenHave").toString();
-firstname = pn.getProperty("firstname").toString();
-complexion = pn.getProperty("complexion").toString();
-homeType = pn.getProperty("homeType").toString();
-smoke = pn.getProperty("smoke").toString();
-petsHave = pn.getProperty("petsHave").toString();
-mobileno = pn.getProperty("mobileno").toString();
-country = pn.getProperty("country").toString();
-hairLength = pn.getProperty("hairLength").toString();
-//profilebtn = pn.getProperty("profilebtn").toString();
-email = pn.getProperty("email").toString();
-eyeColor = pn.getProperty("eyeColor").toString();
-dob = pn.getProperty("dob").toString();
-languageSpoken = pn.getProperty("languageSpoken").toString();
-ethnicity = pn.getProperty("ethnicity").toString();
-employmentStatus = pn.getProperty("employmentStatus").toString();
+try { 
+	Query q1 =  new Query("PROFILE");
+	q1.addFilter("userid", Query.FilterOperator.EQUAL, uid);
+	PreparedQuery pq = ds.prepare(q1);
+	Entity pn  = pq.asSingleEntity();
 
+	profileid = pn.getKey().getId()+"";
+	userid = pn.getProperty("userid").toString();
+	System.out.println("userid="+pn.getProperty("userid").toString());
+	
+	blobkey = pn.getProperty("blobkey").toString();
+	hairType = pn.getProperty("hairType").toString();
+	eyeWear = pn.getProperty("eyeWear").toString();
+	appearance = pn.getProperty("appearance").toString();
+	weight = pn.getProperty("weight").toString();
+	//userid = pn.getProperty("userid").toString();
+	lastname = pn.getProperty("lastname").toString();
+	hairColor = pn.getProperty("hairColor").toString();
+	education = pn.getProperty("education").toString();
+	maritalStatus = pn.getProperty("maritalStatus").toString();
+	password = pn.getProperty("password").toString();
+	//profileid = pn.getProperty("profileid").toString();
+	religion = pn.getProperty("religion").toString();
+	facialHair = pn.getProperty("facialHair").toString();
+	username = pn.getProperty("username").toString();
+	height = pn.getProperty("height").toString();
+	polygamy = pn.getProperty("polygamy").toString();
+	englishAbility = pn.getProperty("englishAbility").toString();
+	drink = pn.getProperty("drink").toString();
+	livingSituation = pn.getProperty("livingSituation").toString();
+	gender = pn.getProperty("gender").toString();
+	bodyStyle = pn.getProperty("bodyStyle").toString();
+	occupation = pn.getProperty("occupation").toString();
+	tribe = pn.getProperty("tribe").toString();
+	childrenHave = pn.getProperty("childrenHave").toString();
+	firstname = pn.getProperty("firstname").toString();
+	complexion = pn.getProperty("complexion").toString();
+	homeType = pn.getProperty("homeType").toString();
+	smoke = pn.getProperty("smoke").toString();
+	petsHave = pn.getProperty("petsHave").toString();
+	mobileno = pn.getProperty("mobileno").toString();
+	country = pn.getProperty("country").toString();
+	hairLength = pn.getProperty("hairLength").toString();
+	//profilebtn = pn.getProperty("profilebtn").toString();
+	email = pn.getProperty("email").toString();
+	eyeColor = pn.getProperty("eyeColor").toString();
+	dob = pn.getProperty("dob").toString();
+	languageSpoken = pn.getProperty("languageSpoken").toString();
+	ethnicity = pn.getProperty("ethnicity").toString();
+	employmentStatus = pn.getProperty("employmentStatus").toString();
 
 } catch(Exception e) { System.out.println("e="+e); }
 
@@ -178,32 +183,7 @@ if(request.getParameter("profilebtn") != null) {
 		ds.put(en);
 		response.setStatus(response.SC_MOVED_TEMPORARILY); 
 		response.setHeader("Location", "?p=profileview");
-/**
-	Entity en = null;
-	String fn = request.getParameter("firstName");
-	
-///	System.out.println(fn);
-	   Enumeration paramNames = request.getParameterNames();
-	   int noe = count("PROFILE");
-	   System.out.println("Number of Entity="+noe);
-	   if(request.getParameter("profileid").equals("")) { en = new Entity("PROFILE",(noe+1)); }
-	   else { int pid2 = Integer.parseInt(pid); en = new Entity("PROFILE",pid2); }
-	int a = 1;
-	   while(paramNames.hasMoreElements()) {
-	      String paramName = (String)paramNames.nextElement();
-	      //out.print("<tr><td>" + paramName + "</td>\n");
-	      String value =  request.getParameter(paramName);
-	      //out.println("<td> " + paramValue + "</td></tr>\n");
-	     System.out.println(paramName);
-	     
-	  	en.setProperty(paramName, value);
 
-	  ///	ds.put(en);
-	 a++;
-	   }
-	   System.out.println("numbers="+a);
-
-*/	
 }
 
 

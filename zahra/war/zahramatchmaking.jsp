@@ -80,7 +80,7 @@
 
 <%! String [] pn1 = {"userid", "username", "password", "firstname", "lastname", "mobileno", "gender", "age", "blobkey"}; 
 
-String [] pn2 = {"age", "appearance", "bestFeature", "birthdate", "birthdate_day", "birthdate_month", "birthdate_year", "blobkey", "bodyArt", "bodyStyle", "childrenHave", "childrenNumber", "childrenOldest", "childrenWant", "childrenYoungest", "cityLive", "complexion", "countryLive", "drink", "education", "employmentStatus", "englishAbility", "ethnicity", "eyeColor", "eyeWear", "facialHair", "firstName", "firstname", "gender", "hairColor", "hairLength", "hairType", "height", "homeType", "incomeBracket", "incomeCurrency", "languageSpoken", "lastName", "lastname", "livingSituation", "maritalStatus", "mobileno", "nationality", "occupation", "p", "password", "petsHave", "polygamy", "profilebtn", "profileid", "religion", "relocate", "resetCurrency", "smoke", "starSign", "stateLive", "tribe", "userid", "username", "weight"};
+String [] pn2 = {"appearance", "dob", "bodyStyle", "childrenHave", "complexion",  "drink", "education", "employmentStatus", "englishAbility", "ethnicity", "eyeColor", "eyeWear", "facialHair", "firstname", "gender", "hairColor", "hairLength", "hairType", "height", "homeType", "languageSpoken",  "lastname", "livingSituation", "maritalStatus", "mobileno", "country", "occupation", "password", "petsHave", "polygamy", "religion", "smoke", "userid", "username", "weight"};
 %>
 
 <%! String s_f="", s_w=""; //String profileid="", userid="", blobkey="", firstname="", gender="", lastname="", mobileno="", password="", username="", age="", photoid=""; %>
@@ -302,7 +302,7 @@ out +="</tr>"+
 	} catch(Exception e) { System.out.println("e:usernamenu()"); }
 	
 	String out = "<div class='block2a'><div class='block2b'><div id='block-block-6' class='block block-block'>"+
-			"<h2>UserID("+uid+"), ProfileID("+profileid+"), Name("+user+")</h2><div class='content'>"+
+			"<h2>Welcome "+user+"</h2><div class='content'>"+
 			"<div align='center' ><img src='/serve?blob-key="+blobkey+"' width='130' height='150' /></div>"+
 			"<ul>"+
 			  "<li><a href='?p=account'>My Account</a></li>"+
@@ -600,15 +600,15 @@ if(request.getParameter("login") != null) {
 %>
 
 <%! public String search(String user) { String out="";
-	String [] sb = {"username","password","firstname","lastname","gender","age","mobileno","email"};
+	String [] sb = {"username","country","firstname","lastname","gender","age","mobileno","email"};
 
 	out +="<div id='main' class='clearfix'><div id='main2'><div class='inner'><h1 class='title'>Search Members</h1>";
 	
-	out +="<form id='form1' name='form1' method='post' action='?p=searchlist'>Search User By:<label>"+
+	out +="<form id='form1' name='form1' method='get' action=''>Search User By:<label>";
+	out +="<input name='p' type='hidden' id='hiddenField' value='searchlist' />";
 	
-	"<select name='tp' id='tp'><option value='USERS'>USERS</option><option value='PROFILE'>PROFILE</option></select>"+
 			
-	  "<select name='fl' id='fl'><option value='--' >-Select-</option>";
+	out +=  "<select name='fl' id='fl'><option value='--' >-Select-</option>";
 	  
 	  for(String st: sb) { out +="<option value='"+st+"' >"+st+"</option>"; }
     
@@ -645,6 +645,7 @@ if(srch!=null)	{
     %>
 
 <%
+/**
 if(request.getParameter("search") != null) {
 	String tp = request.getParameter("tp");
 	String fl = request.getParameter("fl");
@@ -663,27 +664,9 @@ if(request.getParameter("search") != null) {
 	} catch(Exception e4) { System.out.println(e4); }
     /**
 	
-//	srch = fl+"="+w;
-//	session.setAttribute("fl", fl);
-//	session.setAttribute("w", w);
-	
-//	session.setAttribute("s_f", fl);
-//	session.setAttribute("s_w", w);
-try {	
-	Query q = new Query("PROFILE");
-	q.addFilter(fl, Query.FilterOperator.EQUAL, w);
-    PreparedQuery pq = ds.prepare(q); 
-} catch(Exception e4) { System.out.println(e4); }
-    
 
-for (Entity result : pq.asIterable()) {   
-   String blobkey = (String) result.getProperty("blobkey");
-   srch = blobkey;
-   System.out.println("babyna="+srch);
-	}
-*/
 }
-
+*/
 %>
 
 

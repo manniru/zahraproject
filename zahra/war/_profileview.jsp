@@ -14,21 +14,65 @@
 
 
 <% // Get Entity
-int ui = Integer.parseInt(uid);
-try {
-Key ky = KeyFactory.createKey("USERS", ui);
-Entity e1 = ds.get(ky);
-blobkey = e1.getProperty("blobkey").toString();
-firstname = e1.getProperty("firstname").toString();
-gender = 	e1.getProperty("gender").toString();
-lastname = 	e1.getProperty("lastname").toString();
-mobileno = 	e1.getProperty("mobileno").toString();
-password = 	e1.getProperty("password").toString();
-username = 	e1.getProperty("username").toString();
-age = 	e1.getProperty("age").toString();
+/**
+if(request.getParameter("pid") != null) {
+	int pid = Integer.parseInt(request.getParameter("pid"));
+	
+	try { Query q1 =  new Query("PROFILE");
+	q1.addFilter("userid", Query.FilterOperator.EQUAL, pid);
+	PreparedQuery pq = ds.prepare(q1);
+	Entity pn  = pq.asSingleEntity();
+	profileid = pn.getKey().getId()+"";
+	userid = pn.getProperty("userid").toString();
 
-} catch(Exception e) { System.out.println(e); }
+	blobkey = pn.getProperty("blobkey").toString();
+	hairType = pn.getProperty("hairType").toString();
+	eyeWear = pn.getProperty("eyeWear").toString();
+	appearance = pn.getProperty("appearance").toString();
+	weight = pn.getProperty("weight").toString();
+	//userid = pn.getProperty("userid").toString();
+	lastname = pn.getProperty("lastname").toString();
+	hairColor = pn.getProperty("hairColor").toString();
+	education = pn.getProperty("education").toString();
+	maritalStatus = pn.getProperty("maritalStatus").toString();
+	password = pn.getProperty("password").toString();
+	//profileid = pn.getProperty("profileid").toString();
+	religion = pn.getProperty("religion").toString();
+	facialHair = pn.getProperty("facialHair").toString();
+	username = pn.getProperty("username").toString();
+	height = pn.getProperty("height").toString();
+	polygamy = pn.getProperty("polygamy").toString();
+	englishAbility = pn.getProperty("englishAbility").toString();
+	drink = pn.getProperty("drink").toString();
+	livingSituation = pn.getProperty("livingSituation").toString();
+	gender = pn.getProperty("gender").toString();
+	bodyStyle = pn.getProperty("bodyStyle").toString();
+	occupation = pn.getProperty("occupation").toString();
+	tribe = pn.getProperty("tribe").toString();
+	childrenHave = pn.getProperty("childrenHave").toString();
+	firstname = pn.getProperty("firstname").toString();
+	complexion = pn.getProperty("complexion").toString();
+	homeType = pn.getProperty("homeType").toString();
+	smoke = pn.getProperty("smoke").toString();
+	petsHave = pn.getProperty("petsHave").toString();
+	mobileno = pn.getProperty("mobileno").toString();
+	country = pn.getProperty("country").toString();
+	hairLength = pn.getProperty("hairLength").toString();
+	//profilebtn = pn.getProperty("profilebtn").toString();
+	email = pn.getProperty("email").toString();
+	eyeColor = pn.getProperty("eyeColor").toString();
+	dob = pn.getProperty("dob").toString();
+	languageSpoken = pn.getProperty("languageSpoken").toString();
+	ethnicity = pn.getProperty("ethnicity").toString();
+	employmentStatus = pn.getProperty("employmentStatus").toString();
 
+
+	} catch(Exception e) { System.out.println("e="+e); }
+
+
+
+}
+*/
 %>
 <script src="./profile_files/jquery.ui.core.min.js" type="text/javascript"></script>
 
@@ -105,49 +149,16 @@ age = 	e1.getProperty("age").toString();
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 				
 <%
 
-/**
-out.println("<tr><td id='profiledetailhdr2' align='left' colspan='5'><em>Account Information</em></td></tr>");
-for(String s: pn1) {
-	Entity e1 = null;
-	String pv = "";
-	int ui2 = Integer.parseInt(uid);
-	try {
-	Key ky = KeyFactory.createKey("USERS", ui2);
-	e1 = ds.get(ky);
-	//blobkey = e1.getProperty("blobkey").toString();
 
-	} catch(Exception e) { System.out.println(e); }
-	
-	//String pn = "";
-	//if(s.equalsIgnoreCase("blobkey")) { pv = "<img src='/serve?blob-key="+pv+"' width='50' height='50' />"; }
-	//else { 
-		try { pv = e1.getProperty(s).toString(); } catch(Exception e4) { }
-	//	}
-	out.println("<tr><td id='td1' width='30%' align='left' class='beige'>"+s.toUpperCase()+":</td>"+
-			"<td id='td1' width='50%' class='ag_23'>"+pv+"</td></tr>");
-}
-*/
 %>
 <tr><td id="profiledetailhdr2" align="left" colspan="5"><em>Profile Information</em></td></tr>
 
 <%
+
+
 for(String s: pn2) {
 	Entity e1 = null;
 	String pv = "";
@@ -164,9 +175,7 @@ for(String s: pn2) {
 
 	} catch(Exception e) { System.out.println(e); }
 	
-	//String pn = "";
-	//if(s.equalsIgnoreCase("blobkey")) { pv = "<img src='/serve?blob-key="+pv+"' width='50' height='50' />"; }
-	//else { 
+
 		try { pv = e1.getProperty(s).toString(); } catch(Exception e4) { }
 	//	}
 	out.println("<tr><td id='td1' width='30%' align='left' class='beige'>"+s.toUpperCase()+":</td>"+

@@ -2,10 +2,21 @@
 <%
 out.println("<div style='margin-left:200px; '><h1 class='title'>Search Members</h1></div>");
 
-if(request.getParameter("pid") != null) {
-	int pid = Integer.parseInt(request.getParameter("pid"));
-	try { Key ky = KeyFactory.createKey("PROFILE", pid);
-	Entity e1 = ds.get(ky);
+if(request.getParameter("fl") != null && request.getParameter("w") != null) {
+	String fl = request.getParameter("fl");
+	String w = request.getParameter("w");
+	
+	//int pid = Integer.parseInt(request.getParameter("pid"));
+
+		
+	try { 
+		Query q1 =  new Query("PROFILE");
+		q1.addFilter(fl, Query.FilterOperator.EQUAL, w);
+		PreparedQuery pq = ds.prepare(q1);
+		Entity e1  = pq.asSingleEntity();	
+		
+		//Key ky = KeyFactory.createKey("PROFILE", pid);
+	//Entity e1 = ds.get(ky);
 	username = e1.getProperty("username").toString();
 	blobkey = e1.getProperty("blobkey").toString();
 	dob = e1.getProperty("dob").toString();
@@ -188,5 +199,3 @@ if(request.getParameter("pid") != null) {
 
 
 </html>
-
-<!-- This document saved from ?p=results/search?searchtype=1 -->
