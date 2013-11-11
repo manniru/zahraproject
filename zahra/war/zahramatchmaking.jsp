@@ -152,8 +152,9 @@ if(session.getAttribute("s_w") != null) { s_w = session.getAttribute("s_w").toSt
 	int n=1;
     for (Entity result : pq.asIterable()) {
     	int id = Integer.parseInt(result.getKey().getId()+"");
-       String username = (String) result.getProperty("username");   
-       String blobkey = (String) result.getProperty("blobkey");
+       String username = (String) result.getProperty("username"); 
+       String blobkey = "";
+       try { blobkey = (String) result.getProperty("blobkey"); } catch(Exception e3) { System.out.println("navigation(): "+e3); }
       // System.out.println(id);
        o1 +="<tr><td><img src='/serve?blob-key="+blobkey+"' width='50' height='50' /></td></tr>"; 
        o1 +="<tr><td>"+username+"</td></tr>"; 
@@ -218,7 +219,7 @@ out +="</tr>"+
     	Key ky = KeyFactory.createKey("USERS", nu);
     	Entity en = ds.get(ky);
     	blobkey = en.getProperty("blobkey").toString();
-    	} catch(Exception e3) { System.out.println("matsala a zahramatchmaking.jsp 210:66"); }
+    	} catch(Exception e4) { System.out.println(e4); }
     	out +="<td><img src='/serve?blob-key="+blobkey+"' width='50' height='50' /></td>";
      }		
 
@@ -447,6 +448,7 @@ if(request.getParameter("login") != null) {
 %>
 
 <%! public String account(String user) {
+	
 	int uid2 = Integer.parseInt(uid);
 	String username="", pword="", fname="", lname="", mobileno="", gender="", dob="", blobkey="", email="", datereg="";
 	String userid="";
@@ -739,3 +741,8 @@ if(request.getParameter("search") != null) {
 }
 
 %>
+
+
+
+
+<% System.out.println("Current User ID is "+uid); %>

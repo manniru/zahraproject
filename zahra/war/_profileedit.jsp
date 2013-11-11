@@ -1019,7 +1019,7 @@ if(request.getParameter("profilebtn") != null) {
 <option value="Horse">Horse</option>
 <option value="Other">Other</option>
 
-                                <option value="-" selected="selected"><%=gender %></option>
+                                <option value="-" selected="selected"><%="no" %></option>
                             
                 	    </select>
                 

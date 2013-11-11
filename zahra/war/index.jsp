@@ -69,7 +69,7 @@
 
   
 <% if(request.getParameter("p") == null && request.getParameter("add")==null) { %>
-<div align="center"><%@include file="slider.html" %></div><%@include file="_slide.jsp" %><% } %>
+<div align="center"></div><%@include file="_slide.jsp" %><% } %>
 <% if(request.getParameter("p") != null && request.getParameter("p").equalsIgnoreCase("register")) { %><%= register(user) %><% } %>
 <% if(request.getParameter("p") != null && request.getParameter("p").equalsIgnoreCase("members")) { %><%= members(user) %><% } %>
 <% if(request.getParameter("p") != null && request.getParameter("p").equalsIgnoreCase("account")) { %><%= account(user) %><% } %>

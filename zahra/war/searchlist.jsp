@@ -136,7 +136,7 @@ if(request.getParameter("fl") != null && request.getParameter("w") != null) {
 	                        	<a href="?p=photoDisplay.cfm?mID=25333&amp;ph1=1&amp;ph2=1&amp;ph3=0&amp;ph4=0&amp;ph5=0&amp;searchposition=4&amp;searchtotal=11&amp;fname=Annie&amp;keepThis=true&amp;TB_iframe=true&amp;height=607&amp;width=700" name="Annie  -  30  -  Lagos, Nigeria" class="thickbox">
 	                        
 	                            <div class="photo">
-                                   <p>2</p>
+                                   <p><%= uid %></p>
 	                            </div>
 	                    	</a>
 	                    
@@ -165,33 +165,7 @@ if(request.getParameter("fl") != null && request.getParameter("w") != null) {
 					    
 					    </p>
 				      </div>
-	                    
-					    <span class="icons">
-					    	<ul class="iconset">
-					    		
-	                            <li class="iconstandard">
-								
-	                            	<a href="?p=profile/showprofile/ID/25333?searchposition=4&amp;searchtotal=11" title="click here to view profile"></a>
-	                            
-	                            </li>
-								
-								
-	                                <li class="iconmail"><a href="?p=mail/showemail?mid=25333" title="Send Annie mail" class="emailpopup" rel="25333" memname="Annie"></a></li>
-	                            
-	                                <li class="iconinterest sendinterest" name="0D0280E5C7A60F814F" data-altclass="iconinterestsent" data-msid="25333" data-imageurl="http://cdn.kenyancupid.com/memphoto/Photo1/small/25333.jpg" data-name="Annie"><a href="?p=memberrelationship/showinterest/0D0280E5C7A618814F" title="Show interest in Annie"></a></li>
-	                            
-	                                <li class="iconfavorites addfavorites" name="0D0280E5C7A60F814F" data-altclass="iconfavoritessent" data-imageurl="http://cdn.kenyancupid.com/memphoto/Photo1/small/25333.jpg" data-name="Annie"><a href="?p=memberrelationship/addfavorite/0D0280E5C7A618814F" title="Add Annie to your favorites"></a></li>
-	                            
-	                                <li class="iconoffline">
-	                                
-	                                    <a href="javascript: void(0);" title="I'm Not Online"></a>
-	                                
-	                                </li>
-	                            
-							</ul>
-					    </span>	
-						
-					</div>
+</div>
 					</div>
   <div class="clear"></div>
 </div>
