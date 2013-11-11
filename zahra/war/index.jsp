@@ -78,7 +78,7 @@
 <% if(request.getParameter("p") != null && request.getParameter("p").equalsIgnoreCase("aboutus")) { %><%@include file="_aboutus.jsp" %><% } %>
 <% if(request.getParameter("p") != null && request.getParameter("p").equalsIgnoreCase("forums")) { %><%@include file="_forums.jsp" %><% } %>
 <% if(request.getParameter("p") != null && request.getParameter("p").equalsIgnoreCase("contactus")) { %><%@include file="_contactus.jsp" %><% } %>
-<% if(request.getParameter("p") != null && request.getParameter("p").equalsIgnoreCase("chatroom")) { %><%@include file="_chatroom.jsp" %><% } %>
+<% if(request.getParameter("p") != null && request.getParameter("p").equalsIgnoreCase("chatroom")) { %><%@include file="_chat.jsp" %><% } %>
 <% if(request.getParameter("p") != null && request.getParameter("p").equalsIgnoreCase("profileedit")) { %><%@include file="_profileedit.jsp" %><% } %>
 <% if(request.getParameter("p") != null && request.getParameter("p").equalsIgnoreCase("profileview")) { %><%@include file="_profileview.jsp" %><% } %>
 
@@ -90,6 +90,7 @@
 
 <% if(request.getParameter("p") != null && request.getParameter("p").equalsIgnoreCase("search")) { %><%= search(user) %><% } %>
 <% if(request.getParameter("p") != null && request.getParameter("p").equalsIgnoreCase("searchlist")) { %><%@include file="searchlist.jsp" %><% } %>
+<% if(request.getParameter("p") != null && request.getParameter("p").equalsIgnoreCase("chat")) { %><%@include file="_chat.jsp" %><% } %>
 
 
 <div id="sidebar-right" class="clearfix">
