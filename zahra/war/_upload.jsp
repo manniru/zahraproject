@@ -11,10 +11,8 @@
 <%! String uid2=null; %>
 <%! BlobstoreService bs = BlobstoreServiceFactory.getBlobstoreService(); %>
 
-<%
-   // BlobstoreService blobstoreService = BlobstoreServiceFactory.getBlobstoreService();
-if(session.getAttribute("uid") != null) { uid2 = session.getAttribute("uid").toString(); }
-%>
+
+<% if(session.getAttribute("uid") != null) { uid2 = session.getAttribute("uid").toString(); } %>
 
 <%
 

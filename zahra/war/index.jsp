@@ -81,8 +81,8 @@ String [] pn2 = {"appearance", "dob", "bodyStyle", "childrenHave", "complexion",
 %>
 
 <%! String s_f="", s_w=""; //String profileid="", userid="", blobkey="", firstname="", gender="", lastname="", mobileno="", password="", username="", age="", photoid=""; %>
-<%! String country="", dob="", email="", datereg="", age="", appearance="", bestFeature="", birthdate="", birthdate_day="", birthdate_month="", birthdate_year="", blobkey="", bodyArt="", bodyStyle="", childrenHave="", childrenNumber="", childrenOldest="", childrenWant="", childrenYoungest="", cityLive="", complexion="", countryLive="", drink="", education="", employmentStatus="", englishAbility="", ethnicity="", eyeColor="", eyeWear="", facialHair="", firstName="", firstname="", gender="", hairColor="", hairLength="", hairType="", height="", homeType="", incomeBracket="", incomeCurrency="", languageSpoken="", lastName="", lastname="", livingSituation="", maritalStatus="", mobileno="", nationality="", occupation="", password="", petsHave="", polygamy="", profilebtn="", profileid="", religion="", relocate="", resetCurrency="", smoke="", starSign="", stateLive="", tribe="", userid="", username="", weight=""; %>
-<%! int age2=0; %>
+<%! //String country="", dob="", email="", datereg="", age="", appearance="", bestFeature="", birthdate="", birthdate_day="", birthdate_month="", birthdate_year="", blobkey="", bodyArt="", bodyStyle="", childrenHave="", childrenNumber="", childrenOldest="", childrenWant="", childrenYoungest="", cityLive="", complexion="", countryLive="", drink="", education="", employmentStatus="", englishAbility="", ethnicity="", eyeColor="", eyeWear="", facialHair="", firstName="", firstname="", gender="", hairColor="", hairLength="", hairType="", height="", homeType="", incomeBracket="", incomeCurrency="", languageSpoken="", lastName="", lastname="", livingSituation="", maritalStatus="", mobileno="", nationality="", occupation="", password="", petsHave="", polygamy="", profilebtn="", profileid="", religion="", relocate="", resetCurrency="", smoke="", starSign="", stateLive="", tribe="", userid="", username="", weight=""; %>
+<%! //int age2=0; %>
 <%! String path = "", date=""; %>
 <% try { path = request.getParameter("p").substring(0, 8); } catch(Exception e1) { } %>
 
@@ -737,7 +737,6 @@ if(request.getParameter("search") != null) {
 	return str;
 	
 }
-
 %>
 
 
@@ -852,7 +851,9 @@ if(request.getParameter("search") != null) {
 <% if(request.getParameter("p") != null && request.getParameter("p").equalsIgnoreCase("search")) { %><%= search(user) %><% } %>
 
 <% if(request.getParameter("p") != null && request.getParameter("p").equalsIgnoreCase("upload")) { %><%@include file="_upload.jsp" %><% } %>
-
+<% if(request.getParameter("p") != null && request.getParameter("p").equalsIgnoreCase("searchlist")) { %><%@include file="searchlist.jsp" %><% } %>
+<% if(request.getParameter("p") != null && request.getParameter("p").equalsIgnoreCase("profileedit")) { %><%@include file="_profileedit.jsp" %><% } %>
+<% if(request.getParameter("p") != null && request.getParameter("p").equalsIgnoreCase("profileview")) { %><%@include file="_profileview.jsp" %><% } %>
 
 <div id="sidebar-right" class="clearfix">
       
