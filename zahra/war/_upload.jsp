@@ -8,18 +8,22 @@
 <%@ page import="com.google.appengine.api.datastore.DatastoreServiceFactory" %>
 <%@ page import="com.google.appengine.api.datastore.Entity" %>
 
+<%! String uid2=null; %>
+<%! BlobstoreService bs = BlobstoreServiceFactory.getBlobstoreService(); %>
+
 <%
-    BlobstoreService blobstoreService = BlobstoreServiceFactory.getBlobstoreService();
+   // BlobstoreService blobstoreService = BlobstoreServiceFactory.getBlobstoreService();
+if(session.getAttribute("uid") != null) { uid2 = session.getAttribute("uid").toString(); }
 %>
 
 <%
-/**
+
 if(request.getParameter("upload") != null) {
 	System.out.println("upload clicked!");
 	DatastoreService ds = DatastoreServiceFactory.getDatastoreService();
 	String uid = request.getParameter("uid");
 
-    Map<String, BlobKey> blobs = blobstoreService.getUploadedBlobs(request);
+    Map<String, BlobKey> blobs = bs.getUploadedBlobs(request);
     BlobKey blobKey = blobs.get("myFile");
     
     
@@ -33,7 +37,7 @@ if(request.getParameter("upload") != null) {
     else { response.sendRedirect("/serve?blob-key=" + blobKey.getKeyString()); }
 	
 }
-*/
+
 %>
 
 
@@ -42,9 +46,9 @@ if(request.getParameter("upload") != null) {
                <h1 class='title'>User picture upload</h1>
                          
 
-<form action='<%= blobstoreService.createUploadUrl("/upload?uid="+uid) %>' method='post' enctype='multipart/form-data'>
+<form action='<%= bs.createUploadUrl("/upload?uid="+uid2) %>' method='post' enctype='multipart/form-data'>
           <table width='451' border='1'>
-            <tr><td>User ID:</td><td><input name='userid' type='text' id='userid' value='<%= uid %>'></td></tr>
+            <tr><td>User ID:</td><td><input name='userid' type='text' id='userid' value='<%= uid2 %>'></td></tr>
 
             <tr>
               <td>&nbsp;</td>
