@@ -1,0 +1,40 @@
+<%@
+page import="javax.servlet.http.*,
+com.twilio.sdk.TwilioRestClient,
+com.twilio.sdk.TwilioRestException,
+com.twilio.sdk.resource.factory.SmsFactory,
+com.twilio.sdk.resource.instance.Sms,
+com.twilio.sdk.resource.list.SmsList,
+java.util.HashMap,
+java.util.Map"
+%>
+<%
+if(request.getParameter("mobileno") != null) {
+	String mn = "+"+request.getParameter("mobileno");
+	
+	//String mobile = "+"+"601123064474";
+	
+	String msg = "Thank you for Register at Zahra Maigari eMtachmaking System you can login any time at www.zahramaigari.com to start chatting with new Friend";
+	out.println(sendsms(mn, msg));
+
+}
+%>
+
+<%! public String sendsms(String mobileno, String msg) {
+	String rt="";
+	try {
+	TwilioRestClient client = new TwilioRestClient("AC0b56c1b6b1ff87e0caaf2c41ee5a7380", "c09e3ae21d61af8c9ad0f24a61c932ea");
+	// Build a filter for the SmsList
+			Map<String, String> params = new HashMap<String, String>();
+			params.put("Body", msg);
+			params.put("To", mobileno);
+			params.put("From", "+14242851118");
+			SmsFactory messageFactory = client.getAccount().getSmsFactory();
+			Sms message = messageFactory.create(params);
+			rt = message.getSid();
+	} catch(Exception e) { System.out.println("sendsms()"+e); }
+	
+	return rt;
+}
+
+%>

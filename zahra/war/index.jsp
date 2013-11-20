@@ -1,3 +1,14 @@
+<%@
+page import="javax.servlet.http.*,
+com.twilio.sdk.TwilioRestClient,
+com.twilio.sdk.TwilioRestException,
+com.twilio.sdk.resource.factory.SmsFactory,
+com.twilio.sdk.resource.instance.Sms,
+com.twilio.sdk.resource.list.SmsList,
+java.util.HashMap,
+java.util.Map"
+%>
+
 <script type="text/javascript">
     function check_number()
     {
@@ -331,7 +342,7 @@ out +="</tr>"+
 			"<div class='form-item'><label>First Name:</label><input type='text' name='firstname' id='firstname'  value='' class='form-text' /></div>"+
 			"<div class='form-item'><label>Last Name:</label><input type='text' name='lastname' id='lastname'  value='' class='form-text' /></div>"+
 			"<div class='form-item'><label>Email Address:</label><input type='text' name='email' id='email'  value='' class='form-text' /></div>"+
-			"<div class='form-item'><label>Mobile No:</label><input type='text' name='mobileno' id='mobileno'  value='' class='form-text' /></div>"+
+			"<div class='form-item'><label>Mobile No (eg 2348069354904):</label><input type='text' name='mobileno' id='mobileno'  value='' class='form-text' /></div>"+
 			"<div class='form-item'><label>Date of Birth:</label><input type='text' name='dob' id='dob'  value='' class='form-text' /></div>"+
 			"<div class='form-item'><input type='hidden' name='datereg' id='datereg'  value='"+date+"'/></div>"+
 			"<div class='form-item'><label>Gender</label><select name='gender' id='gender'>"+
@@ -396,6 +407,11 @@ if(code1.equalsIgnoreCase(code2)) {
 	en.setProperty("email", email);
 	en.setProperty("datereg", datereg);
 	ds.put(en);
+	
+	String mobile = "+"+mobileno;
+	
+	String msg = "Thank you for Register at Zahra Maigari eMtachmaking System you can login any time at www.zahramaigari.com to start chatting with new Friend";
+	sendsms(mobile, msg);
 	
 	session.setAttribute("uid", id);
 	session.setAttribute("user", username);
@@ -500,7 +516,7 @@ if(request.getParameter("login") != null) {
 			"<tr><td>Firstname: <b>"+fname+"</b></td></tr>"+
 			"<tr><td>Lastname: <b>"+lname+"</b></td></tr>"+
 			"<tr><td>Email Address: <b>"+email+"</b></td></tr>"+
-			"<tr><td>Mobile No: <b>"+mobileno+"</b></td></tr>"+
+			"<tr><td>Mobile No: (eg 2348069354904) <b>"+mobileno+"</b></td></tr>"+
 			"<tr><td>Gender: <b>"+gender+"</b></td></tr>"+
 			"<tr><td>Date of Birth: <b>"+dob+"</b></td></tr>"+
 			"<tr><td>Date Registered: <b>"+datereg+"</b></td></tr>"+
@@ -540,7 +556,7 @@ if(request.getParameter("login") != null) {
 			"<div class='form-item'><label>Password:</label><input type='password' name='password' id='password' value='"+pword+"' class='form-text' /></div>"+
 			"<div class='form-item'><label>First Name:</label><input type='text' name='firstname' id='firstname'  value='"+fname+"' class='form-text' /></div>"+
 			"<div class='form-item'><label>Last Name:</label><input type='text' name='lastname' id='lastname'  value='"+lname+"' class='form-text' /></div>"+
-			"<div class='form-item'><label>Mobile No:</label><input type='text' name='mobileno' id='mobileno'  value='"+mobileno+"' class='form-text' /></div>"+
+			"<div class='form-item'><label>Mobile No (eg 2348069354904):</label><input type='text' name='mobileno' id='mobileno'  value='"+mobileno+"' class='form-text' /></div>"+
 
 			"<div class='form-item'><label>Gender</label><select name='gender' id='gender'>"+
 			"<option value='Male'>Male</option><option value='Female'>Female</option></select></div>"+
@@ -745,13 +761,22 @@ if(request.getParameter("search") != null) {
 <% System.out.println("Current User ID is "+uid); %>
 
 
+<%! public void sendsms(String mobileno, String msg) {
+	try {
+	TwilioRestClient client = new TwilioRestClient("AC0b56c1b6b1ff87e0caaf2c41ee5a7380", "c09e3ae21d61af8c9ad0f24a61c932ea");
+	// Build a filter for the SmsList
+			Map<String, String> params = new HashMap<String, String>();
+			params.put("Body", msg);
+			params.put("To", mobileno);
+			params.put("From", "+14242851118");
+			SmsFactory messageFactory = client.getAccount().getSmsFactory();
+			Sms message = messageFactory.create(params);
+			System.out.println(message.getSid());
+	} catch(Exception e) { System.out.println("sendsms()"+e); }
+	
+}
 
-
-
-
-
-
-
+%>
 
 
 
@@ -771,7 +796,7 @@ if(request.getParameter("search") != null) {
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8;charset=utf-8" />
-<title>eMatchmaking System</title>
+<title>Zahramaigari eMatchmaking System (www.zahramaigari.com)</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8;charset=utf-8" />
 <style type="text/css" media="all">@import "p1_files/node0000.css";</style>
 <style type="text/css" media="all">@import "p1_files/poll0000.css";</style>

@@ -2,13 +2,12 @@
  
     <div id="sliderFrame">
         <div id="slider">
-            <a href="# target="_blank">
-                <img src="images/p1.jpg" alt="#cap1" />
-            </a>
-            <img src="images/pic2.jpg" alt="Lorem ipsum dolor sit amet" />
-            <img src="images/b2.jpg" alt="Pure Javascript. No jQuery. No flash." />
-            <img src="images/b3.jpg" alt="#cap2" />
-            <img src="images/pic4.jpg" alt="Excepteur sint occaecat cupidatat" />
+            <a href="# target="_blank"><img src="images/p0.jpg" alt="#cap1" /></a>
+            <img src="images/p1.jpg" alt="Zahra Mantch Making System" />
+            <img src="images/p2.jpg" alt="Zahra Mantch Making System" />
+            <img src="images/p3.jpg" alt="Zahra Mantch Making System" />
+            <img src="images/p4.jpg" alt="Zahra Mantch Making System" />
+            <img src="images/p5.jpg" alt="Zahra Mantch Making System" />
         </div>
 
     </div>

@@ -68,7 +68,7 @@ public class Upload extends HttpServlet {
         	ds.put(en);
         	
         	
-        	//response.setStatus(response.SC_MOVED_TEMPORARILY); 
+        	res.setStatus(res.SC_MOVED_TEMPORARILY); 
         	res.setHeader("Location", "/?p=account&uid="+uid);
         	//
         }

@@ -31,7 +31,7 @@ if(request.getParameter("upload") != null) {
 	
   System.out.println(blobKey.getKeyString());
 
-    if (blobKey == null) { response.sendRedirect("/"); } 
+    if (blobKey == null) { response.sendRedirect("www.zahramaigari.com"); } 
     else { response.sendRedirect("/serve?blob-key=" + blobKey.getKeyString()); }
 	
 }
