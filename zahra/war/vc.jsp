@@ -854,51 +854,13 @@ if(request.getParameter("search") != null) {
 <%= menus("user") %>
     </div>
 
-  <div id="page2"><div id="page3">
-    
-<div id='msg' align="center" style="font-size:20px; color:red"><b></b><%=msg %></b></div>   
-
-  
-<% if(request.getParameter("p") == null && request.getParameter("add")==null) { %>
-<div align="center"></div><%@include file="_slide.jsp" %><% } %>
-<% if(request.getParameter("p") != null && request.getParameter("p").equalsIgnoreCase("register")) { %><%= register(user) %><% } %>
-<% if(request.getParameter("p") != null && request.getParameter("p").equalsIgnoreCase("members")) { %><%= members(user) %><% } %>
-<% if(request.getParameter("p") != null && request.getParameter("p").equalsIgnoreCase("account")) { %><%= account(user) %><% } %>
-<% if(request.getParameter("p") != null && request.getParameter("p").equalsIgnoreCase("account/edit")) { %><%= editaccount(user) %><% } %>
-<% if(request.getParameter("p") != null && request.getParameter("p").equalsIgnoreCase("login")) { %><%@include file="_login.jsp" %><% } %>
-<% if(request.getParameter("p") != null && request.getParameter("p").equalsIgnoreCase("aboutus")) { %><%@include file="_aboutus.jsp" %><% } %>
-<% if(request.getParameter("p") != null && request.getParameter("p").equalsIgnoreCase("forums")) { %><%@include file="_forums.jsp" %><% } %>
-<% if(request.getParameter("p") != null && request.getParameter("p").equalsIgnoreCase("contactus")) { %><%@include file="_contactus.jsp" %><% } %>
-<% if(request.getParameter("p") != null && request.getParameter("p").equalsIgnoreCase("chatroom")) { %><%@include file="_chat.jsp" %><% } %>
-<% if(request.getParameter("p") != null && request.getParameter("p").equalsIgnoreCase("password")) { %><%@include file="_password.jsp" %><% } %>
-<% if(request.getParameter("p") != null && request.getParameter("p").equalsIgnoreCase("videochat")) { %><%@include file="_videochat.jsp" %><% } %>
-<% if(request.getParameter("p") != null && request.getParameter("p").equalsIgnoreCase("message")) { %><%@include file="_message.jsp" %><% } %>
-<% if(request.getParameter("p") != null && request.getParameter("p").equalsIgnoreCase("search")) { %><%= search(user) %><% } %>
-
-<% if(request.getParameter("p") != null && request.getParameter("p").equalsIgnoreCase("upload")) { %><%@include file="_upload.jsp" %><% } %>
-<% if(request.getParameter("p") != null && request.getParameter("p").equalsIgnoreCase("searchlist")) { %><%@include file="searchlist.jsp" %><% } %>
-<% if(request.getParameter("p") != null && request.getParameter("p").equalsIgnoreCase("profileedit")) { %><%@include file="_profileedit.jsp" %><% } %>
-<% if(request.getParameter("p") != null && request.getParameter("p").equalsIgnoreCase("profileview")) { %><%@include file="_profileview.jsp" %><% } %>
-
-<div id="sidebar-right" class="clearfix">
-      
-      
-
-<% System.out.println(user);
-if(session.getAttribute("uid") != null) { 
-	out.println(usermenu(user));
-	//out.println(loginblock(user));
-	} else { out.println(loginblock(user)); //out.println(usermenu(user));
-	} %>
+  <div id="page2">
 
 
 
-<%= navigation("user") %>
+mm
 
-</div>
-        <br clear="all"/>
-    <span class="clear"></span>
-  </div>
+
   </div>
   </div>
   </div>

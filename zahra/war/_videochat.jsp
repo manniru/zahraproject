@@ -1,236 +1,162 @@
-<div style="float:left;margin-right:2px;margin-left:20px">
-<html>
+<html lang="en">
+    <head>
+        <title>Zahra Matchmaking Vide Chat System</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <link rel="author" type="text/html" href="https://plus.google.com/100325991024054712503">
+        <meta name="author" content="Muaz Khan">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <link rel="stylesheet" href="https://www.webrtc-experiment.com/style.css">
+        <style>
+            audio,video {
+				width: 100%;
+				vertical-align:top;
+			}
+			input {
+				font-size: 2em;
+				width: 4em;
+			}
+			
+			p { padding: 1em; }
+        </style>
+        <script>
+            document.createElement('article');
+            document.createElement('footer');
+        </script>
+		
+        <!-- Meeting.js library -->
+        <script src="https://www.webrtc-experiment.com/meeting/meeting.js"> </script>
+    </head>
 
-<head>
+    <body>
+    
+<article>
+  <div style="font:Tahoma, Geneva, sans-serif; color:#FFF"><h1><strong>Welcome to Zahramaigari Match Making System Online Video Chat</strong></h1></div>
 
-<h1 class="title">Video Chat</h1>
 
+            <section class="plusone-gplus">
+                <div class="g-plusone" data-href="https://www.webrtc-experiment.com/"></div>
+            </section>
+		
+            <!-- just copy this <section> and next script -->
+            <section class="experiment">
+                <section>
+                    <h2 style="border: 0; padding-left: .5em;">Type the name:</h2>
+					<input type="text" id="meeting-name">
+                  <button id="setup-meeting">Create Video Chat</button>
+        </section>
 
-<title>RTCPeerState & RTCIceConnectionState Demo 1</title>
-<!-- Load the polyfill to switch-hit between Chrome and Firefox -->
-<script src="/chat/js/base/adapter.js"></script>
-<style>
-video {
-  border:2px solid green;
-  width:300px;
-  height:250px;
-}
-button {
-  font: 18px sans-serif;
-  padding: 8px;
-}
-label{
-  font: bold 15px/30px Georgia,serif;
-  display:inline-table;
-  width:200px;
-  text-align:left;
-}
-input{
-  font:italic bold 15px/30px Georgia,serif;
-  text-align:center;
-}
-fieldset{
-  border:none;
-  margin:0px auto;
-}
-</style>
-</head>
-<body>
-<video id="vid1" autoplay></video>
-<video id="vid2" autoplay></video>
-<br>
-<button id="btn1" onclick="start()">Start</button>
-<button id="btn2" onclick="call()">Call</button>
-<button id="btn3" onclick="hangup()">Hang Up</button>
-<br>
-<br>
-<fieldset>
-<label>pc1-state:</label>
-<input type="text" id="pc1-state" size="40" disabled="true">
-<br>
-<label>pc1-ice-connection-state:</label>
-<input type="text" id="pc1-ice-connection-state" size="40" disabled="true">
-<br>
-<label>pc2-state:</label>
-<input type="text" id="pc2-state" size="40" disabled="true">
-<br>
-<label>pc2-ice-connection-state:</label>
-<input type="text" id="pc2-ice-connection-state" size="40" disabled="true">
-</fieldset>
-<script>
-btn1.disabled = false;
-btn2.disabled = true;
-btn3.disabled = true;
-var pc1,pc2;
-var localstream;
-var sdpConstraints = {'mandatory': {
-                        'OfferToReceiveAudio':true,
-                        'OfferToReceiveVideo':true }};
+                <table style="width: 100%;" id="meetings-list"></table>
+                <table style="width: 100%;">
+                    <tr>
+                        <td>
+                            <h2 style="display: block; font-size: 1em; text-align: center;">You!</h2>
+							<div id="local-streams-container"></div>
+                        </td>
+                        <td style="background: white;">
+                            <h2 style="display: block; font-size: 1em; text-align: center;">Remote Peers</h2>
+							<div id="remote-streams-container"></div>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+		
+            <script>
+                var meeting = new Meeting();
 
-function gotStream(stream){
-  trace("Received local stream");
-  // Call the polyfill wrapper to attach the media stream to this element.
-  attachMediaStream(vid1, stream);
-  localstream = stream;
-  btn2.disabled = false;
-}
+                var meetingsList = document.getElementById('meetings-list');
+                var meetingRooms = {};
+                meeting.onmeeting = function (room) {
+                    if (meetingRooms[room.roomid]) return;
+                    meetingRooms[room.roomid] = room;
 
-function start() {
-  trace("Requesting local stream");
-  btn1.disabled = true;
-  // Call into getUserMedia via the polyfill (adapter.js).
-  getUserMedia({audio:true, video:true},
-                gotStream, function() {});
-}
+                    var tr = document.createElement('tr');
+                    tr.innerHTML = '<td>' + room.roomid + '</td>' +
+                        '<td><button class="join">Join</button></td>';
 
-function call() {
-  btn2.disabled = true;
-  btn3.disabled = false;
-  trace("Starting call");
-  videoTracks = localstream.getVideoTracks();
-  audioTracks = localstream.getAudioTracks();
-  if (videoTracks.length > 0)
-    trace('Using Video device: ' + videoTracks[0].label);
-  if (audioTracks.length > 0)
-    trace('Using Audio device: ' + audioTracks[0].label);
-  var servers = null;
-  var pc_constraints = {"optional": []};
+                    meetingsList.insertBefore(tr, meetingsList.firstChild);
 
-  pc1 = new RTCPeerConnection(servers,pc_constraints);
-  trace("Created local peer connection object pc1");
-  document.getElementById("pc1-state").value = pc1.signalingState ||
-                                               pc1.readyState;
-  if (typeof pc1.onsignalingstatechange !== 'undefined') {
-    pc1.onsignalingstatechange = stateCallback1;
-  } else {
-    pc1.onstatechange = stateCallback1;
-  }
-  document.getElementById("pc1-ice-connection-state").value =
-                                                      pc1.iceConnectionState;
-  if (typeof pc1.oniceconnectionstatechange !== 'undefined') {
-    pc1.oniceconnectionstatechange = iceStateCallback1;
-  } else {
-    pc1.onicechange = iceStateCallback1;
-  }
-  pc1.onicecandidate = iceCallback1;
+                    // when someone clicks table-row; joining the relevant meeting room
+                    tr.onclick = function () {
+                        room = meetingRooms[room.roomid];
 
-  pc2 = new RTCPeerConnection(servers,pc_constraints);
-  trace("Created remote peer connection object pc2");
-  document.getElementById("pc2-state").value = pc2.signalingState ||
-                                               pc2.readyState;
-  if (typeof pc2.onsignalingstatechange !== 'undefined') {
-    pc2.onsignalingstatechange = stateCallback2;
-  } else {
-    pc2.onstatechange = stateCallback2;
-  }
-  document.getElementById("pc2-ice-connection-state").value =
-                                                      pc2.iceConnectionState;
-  if (typeof pc2.oniceconnectionstatechange !== 'undefined') {
-    pc2.oniceconnectionstatechange = iceStateCallback2;
-  } else {
-    pc2.onicechange = iceStateCallback2;
-  }
-  pc2.onicecandidate = iceCallback2;
-  pc2.onaddstream = gotRemoteStream;
-  pc1.addStream(localstream);
-  trace("Adding Local Stream to peer connection");
-  pc1.createOffer(gotDescription1);
-}
+                        // manually joining a meeting room
+                        if (room) meeting.meet(room);
 
-function gotDescription1(desc){
-  pc1.setLocalDescription(desc);
-  trace("Offer from pc1 \n" + desc.sdp);
-  pc2.setRemoteDescription(desc);
-  pc2.createAnswer(gotDescription2, null, sdpConstraints);
-}
+                        meetingsList.style.display = 'none';
+                    };
+                };
 
-function gotDescription2(desc){
-  pc2.setLocalDescription(desc);
-  trace("Answer from pc2 \n" + desc.sdp);
-  pc1.setRemoteDescription(desc);
-}
+                var remoteMediaStreams = document.getElementById('remote-streams-container');
+                var localMediaStream = document.getElementById('local-streams-container');
 
-function hangup() {
-  trace("Ending call");
-  pc1.close();
-  pc2.close();
-  document.getElementById("pc1-state").value += "->" +
-                                                pc1.signalingState ||
-                                                pc1.readyState;
-  document.getElementById("pc2-state").value += "->" +
-                                                pc2.signalingState ||
-                                                pc2.readyState;
-  document.getElementById("pc1-ice-connection-state").value += "->" +
-                                                        pc1.iceConnectionState;
-  document.getElementById("pc2-ice-connection-state").value += "->" +
-                                                        pc2.iceConnectionState;
-  pc1 = null;
-  pc2 = null;
-  btn3.disabled = true;
-  btn2.disabled = false;
-}
+                // on getting media stream
+                meeting.onaddstream = function (e) {
+                    if (e.type == 'local') localMediaStream.appendChild(e.video);
+                    if (e.type == 'remote') remoteMediaStreams.insertBefore(e.video, remoteMediaStreams.firstChild);
+                };
+				
+				meeting.openSignalingChannel = function(onmessage) {
+					var channel = location.href.replace(/\/|:|#|%|\.|\[|\]/g, '');
+					var websocket = new WebSocket('wss://www.webrtc-experiment.com:8563');
+					websocket.onopen = function () {
+						websocket.push(JSON.stringify({
+							open: true,
+							channel: channel
+						}));
+					};
+					websocket.push = websocket.send;
+					websocket.send = function (data) {
+						if(websocket.readyState != 1) {
+							return setTimeout(function() {
+								websocket.send(data);
+							}, 300);
+						}
+						
+						websocket.push(JSON.stringify({
+							data: data,
+							channel: channel
+						}));
+					};
+					websocket.onmessage = function(e) {
+						onmessage(JSON.parse(e.data));
+					};
+					return websocket;
+				};
 
-function gotRemoteStream(e){
-  attachMediaStream(vid2, e.stream);
-  trace("Received remote stream");
-}
+                // using firebase for signaling
+                // meeting.firebase = 'muazkh';
 
-function stateCallback1() {
-  var state;
-  if (pc1) {
-    state = pc1.signalingState || pc1.readyState;
-    trace("pc1 state change callback, state:" + state);
-    document.getElementById("pc1-state").value += "->" + state;
-  }
-}
+                // if someone leaves; just remove his video
+                meeting.onuserleft = function (userid) {
+                    var video = document.getElementById(userid);
+                    if (video) video.parentNode.removeChild(video);
+                };
 
-function stateCallback2() {
-  var state;
-  if (pc2) {
-    state = pc2.signalingState || pc2.readyState;
-    trace("pc2 state change callback, state:" + state);
-    document.getElementById("pc2-state").value += "->" + state;
-  }
-}
+                // check pre-created meeting rooms
+                meeting.check();
 
-function iceStateCallback1() {
-  var iceState;
-  if (pc1) {
-    iceState = pc1.iceConnectionState;
-    trace("pc1 ICE connection state change callback, state:" + iceState);
-    document.getElementById("pc1-ice-connection-state").value += "->" +
-                                                                 iceState;
-  }
-}
+                document.getElementById('setup-meeting').onclick = function () {
+                    // setup new meeting room
+                    var meetingRoomName = document.getElementById('meeting-name').value || 'Simple Meeting';
+                    meeting.setup(meetingRoomName);
+                    
+                    this.disabled = true;
+                    this.parentNode.innerHTML = '<h2><a href="' + location.href + '" target="_blank">Share this link</a></h2>';
+                };
+            </script>
+			
+			<section class="experiment">
+                <ol>
+                    <li>How to use Zahra Match Making Video Chat</li>
+                    <li>type the name of your private chat and click create new private chat. </li>
+                </ol>
+			</section>
+<section class="experiment"> </section>
+    </article>
 
-function iceStateCallback2() {
-  var iceState;
-  if (pc2) {
-    iceState = pc2.iceConnectionState;
-    trace("pc2 ICE connection state change callback, state:" + iceState);
-    document.getElementById("pc2-ice-connection-state").value += "->" +
-                                                                 iceState;
-  }
-}
-
-function iceCallback1(event){
-  if (event.candidate) {
-    pc2.addIceCandidate(new RTCIceCandidate(event.candidate));
-    trace("Local ICE candidate: \n" + event.candidate.candidate);
-  } else {
-    trace("end of candidates1");
-  }
-}
-
-function iceCallback2(event){
-  if (event.candidate) {
-    pc1.addIceCandidate(new RTCIceCandidate(event.candidate));
-    trace("Remote ICE candidate: \n " + event.candidate.candidate);
-  } else {
-    trace("end of candidates2");
-  }
-}
-</script>
-</body>
+        <!-- commits.js is useless for you! -->
+        <script src="https://www.webrtc-experiment.com/commits.js" async> </script>
+    </body>
 </html>
-</div>

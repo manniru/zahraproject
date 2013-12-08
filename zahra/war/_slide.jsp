@@ -8,7 +8,7 @@
             <img src="images/f5.jpg" alt="Zahra Mantch Making System" />
             <img src="images/f4.jpg" alt="Zahra Mantch Making System" />
             <img src="images/f3.jpg" alt="Zahra Mantch Making System" />
-            <img src="images/f6.jpg" alt="Zahra Mantch Making System" />
+            <img src="images/f6.png" alt="Zahra Mantch Making System" />
             <img src="images/f7.jpg" alt="Zahra Mantch Making System" />
             <img src="images/f8.jpg" alt="Zahra Mantch Making System" />
         </div>
