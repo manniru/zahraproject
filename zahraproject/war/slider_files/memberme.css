@@ -1,0 +1,311 @@
+select {font-size:11px;}
+#memberpage {margin:0 auto;padding:5px 0;width:770px;}
+/*-------------------------
+Membership
+---------------------------*/
+#membership {float:left;width:220px;}
+#bgmembership {padding:5px;height:425px;border:solid 1px #c1bca6;background-color:#f5f3e9;}
+
+.aPlatinumhdg {display:block;height:30px;-webkit-border-radius:10px 10px 0 0;-moz-border-radius:10px 10px 0 0;border-radius:10px 10px 0 0;padding:0 10px;border:1px solid #8CA6E7;border-bottom:0;
+background: #dde0f9; /* Old browsers */
+background: -moz-linear-gradient(top,  #dde0f9 0%, #c8cbf0 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#dde0f9), color-stop(100%,#c8cbf0)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #dde0f9 0%,#c8cbf0 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #dde0f9 0%,#c8cbf0 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #dde0f9 0%,#c8cbf0 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #dde0f9 0%,#c8cbf0 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dde0f9', endColorstr='#c8cbf0',GradientType=0 ); /* IE6-9 */
+}
+.aPlatinumhdgtext {display:block;float:left;padding:7px 0 0;color:#132735;font-weight:700;}
+.aPlatinumhdg a:link, .aPlatinumhdg a:visited {color:#132735;font-style:italic;}
+.aPlatinumhdg a:hover {text-decoration:none;}
+
+.Goldhdg {display:block;height:30px;-webkit-border-radius:10px 10px 0 0;-moz-border-radius:10px 10px 0 0;border-radius:10px 10px 0 0;padding:0 10px;border:1px solid #D6B273;border-bottom:0;
+background: #fff3d6; /* Old browsers */
+background: -moz-linear-gradient(top,  #fff3d6 0%, #f7dbad 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff3d6), color-stop(100%,#f7dbad)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #fff3d6 0%,#f7dbad 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #fff3d6 0%,#f7dbad 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #fff3d6 0%,#f7dbad 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #fff3d6 0%,#f7dbad 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff3d6', endColorstr='#f7dbad',GradientType=0 ); /* IE6-9 */
+}
+.Goldhdgtext {display:block;float:left;padding:7px 0 0;color:#8e4c09;font-weight:700;}
+.Goldhdg a:link, .Goldhdg a:visited {color:#8e4c09;font-style:italic;}
+.Goldhdg a:hover {text-decoration:none;}
+
+.Standardhdg {display:block;height:30px;-webkit-border-radius:10px 10px 0 0;-moz-border-radius:10px 10px 0 0;border-radius:10px 10px 0 0;padding:0 10px;border:1px solid #ADAA9C;border-bottom:0;
+background: #ebf4dc; /* Old browsers */
+background: -moz-linear-gradient(top,  #ebf4dc 0%, #e3f1ce 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ebf4dc), color-stop(100%,#e3f1ce)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #ebf4dc 0%,#e3f1ce 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #ebf4dc 0%,#e3f1ce 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #ebf4dc 0%,#e3f1ce 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #ebf4dc 0%,#e3f1ce 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebf4dc', endColorstr='#e3f1ce',GradientType=0 ); /* IE6-9 */}
+.Standardhdgtext {display:block;float:left;padding:7px 0 0;color:#2c4e08;font-weight:700;}
+.Standardhdg a:link, .Standardhdg a:visited {color:#2c4e08;font-style:italic;}
+.Standardhdg a:hover {text-decoration:none;}
+/*-------------------------
+Member Left
+---------------------------*/
+.gradeicon {float:right;margin:3px 0 0;}
+.icons-hdg {float:right;margin:0 0 0 3px;}
+.icons {float:left;width:110px;height:100px;}
+.iconstext {padding:0 0 4px 5px;text-align:center;font-size:10px;}
+.cmlogo {margin-top:3px;}
+#inner {overflow:hidden;width:100%;}
+.memberpic {display:block;float:left;width:95px;height:95px;border:1px solid #c1bca6;background:#fff;}
+
+#icons {float:right;padding-top:7px;width:280px;height:64px;font-size:14px;}
+
+#profilebar {margin-top:2px;padding:5px;border:2px solid #fff;background-color:#e5e0cd;font-size:11px;}
+.profilebartext {display:block;float:left;padding:3px 0;color:#443c39;font-weight:700;}
+.edittext a:link, .edittext a:visited {display:block;float:right;color:#443c39;font-weight:400;}
+.edittext a:hover {color:#26201d;text-decoration:none;}
+#profilecompletionbar {margin-bottom:10px;height:15px;border:solid 2px #9f9b8a;background-color:#fff;}
+#profilecompletionlevel { width:0%;height:15px;background-color:#b4ab8c;text-align:center;}
+#profilecompletionlevellabel {padding-top:1px;color:#000;font-weight:700;}
+.btnnextstep {margin-top:0;}
+/*-------------------------
+Member List
+---------------------------*/
+.greyhdg {display:block;padding:0 5px 2px;height:27px;border-bottom:1px solid #333;background-color:#ddd;}
+.greytext {float:left;padding:8px 0 0 5px;color:#333;font-weight:700;}
+.greyicon {float:left;margin:4px 2px 0 10px;}
+#memberlist {float:left;margin-top:5px;width:205px;height:212px;border:1px solid #9f9b8a;background:#fff;font-size:11px;}
+#memberlist ul {display:block;float:left;padding:5px 0;list-style-type:none;}
+#memberlist li {display:block;float:left;padding:1px 0 2px 15px;width:185px;}
+#memberlist a:link, #memberlist a:visited {float:left;padding:4px 0 4px 5px;color:#333;text-decoration:underline;font-weight:400;font-size:11px;line-height:1.4em;}
+#memberlist a:hover {color:#222;text-decoration:none;}
+/*-------------------------
+yellowHighlight
+--------------------------*/
+.yellowHighlight {border-right:1px solid #aaa;border-left:1px solid #aaa;}
+/*-------------------------
+Matches
+---------------------------*/
+#matches {padding:5px 0 5px 15px;border:1px solid #999;background-color:#e9e9e9;}
+#matchbg {display:block;float:left;margin-right:7px;width:115px;height:188px;border:1px solid #aaa;background-color:#fff;color:#333;text-decoration:none;}
+.photo {display:block;margin:5px;width:105px;height:130px;background:url(memberme.css) center top;cursor:hand;}
+.phototext{padding:0 3px;text-align:center;font-size:11px;}
+.matchicons {margin-top:7px;padding-top:7px;background:url(bg_icons.gif) repeat-x;text-align:center;}
+/*-------------------------
+Matches Nav
+---------------------------*/
+.matchhdg {display:block;margin-top:5px;height:30px;-webkit-border-radius:10px 10px 0 0;-moz-border-radius:10px 10px 0 0;border-radius:10px 10px 0 0;padding:0 10px;border:1px solid #777;border-bottom:0;
+background: #efefef; /* Old browsers */
+background: -moz-linear-gradient(top,  #efefef 0%, #d6cbce 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#efefef), color-stop(100%,#d6cbce)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #efefef 0%,#d6cbce 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #efefef 0%,#d6cbce 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #efefef 0%,#d6cbce 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #efefef 0%,#d6cbce 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', endColorstr='#d6cbce',GradientType=0 ); /* IE6-9 */
+}
+.matchhdgtext {display:block;float:left;padding:7px 0 0;color:#222;font-weight:700;}
+
+.matchnav{padding:5px 0 0 10px;border-bottom:solid 3px #666;font-weight:700;line-height:400;}
+.matchnav ul{margin:0 0 0 10px; /*Left offset of entire tab menu relative to page*/list-style-type: none;}
+.matchnav li{display:inline;margin:0;padding:0;}
+.matchnav a{float:left;margin:0;margin-right: 5px; /*spacing between each tab*/padding:0 0 0 5px;background:url(tab-left.gif) no-repeat left top;text-decoration:none;font-size:11px;}
+.matchnav a span{display:block;float:left;padding: 4px 15px 4px 7px;background:url(tab-bg00.gif) no-repeat right top;color:#333;font-weight:700;}
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+.matchnav a span {float:none;}
+/* End IE5-Mac hack */
+.matchnav a:hover span {color: #fff;}
+.matchnav li.selected a{ /*Selected Tab style*/background-position:0 -32px; /*Shift background image up to start of 2nd tab image*/}
+.matchnav li.selected a span{color:#000; /*Selected Tab style*/background-position:100% -32px; /*Shift background image up to start of 2nd tab image*/}
+.matchnav a:hover, .matchnav li.selected a:hover{ /*onMouseover style*/background-position:0 -32px; /*Shift background image up to start of 2nd tab image*/}
+.matchnav a:hover span, .matchnav li.selected a:hover span{ /*onMouseover style*/background-position:100% -32px; /*Shift background image up to start of 2nd tab image*/}
+
+.matchnav-ov a{ /*onMouseover style*/background:url(tab-left.gif) no-repeat 0 -32px; /*Shift background image up to start of 2nd tab image*/}
+.matchnav-ov a span{background:url(tab-bg00.gif) no-repeat 100% -32px; /*Shift background image up to start of 2nd tab image*/ /*onMouseover style*/color: #fff;}
+/*-------------------------
+Bottom Nav
+---------------------------*/
+.matchnavbtm{float:right;padding:5px;width:550px;font-weight:700;}
+.matchnavbtm ul{margin:0;list-style-type: none;margin-left:10px /*Left offset of entire tab menu relative to page*/}
+.matchnavbtm li{display:inline;margin:0;padding:0;}
+.matchnavbtm a{display:block;float:right;margin:0 5px 0 0; /*spacing between each tab*/padding:0;border:1px solid #555;background:url(btn_grey.gif) repeat-x;text-decoration:none;font-size:11px;}
+.matchnavbtm a span{display:block;float:left;padding:2px 10px;background:url(btn_grey.gif) repeat-x;color:#333;font-weight:700;}
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+.matchnavbtm a span {float:none;}
+/* End IE5-Mac hack */
+.matchnavbtm a:hover span {background:url(btn_grez.gif) repeat-x;}
+.matchnavbtm li.selected a{ /*Selected Tab style*/background:url(btn_grez.gif) repeat-x; /*Shift background image up to start of 2nd tab image*/}
+.matchnavbtm li.selected a span{color: #000; /*Selected Tab style*/background:url(btn_grez.gif) repeat-x;/*Shift background image up to start of 2nd tab image*/}
+.matchnavbtm a:hover, .matchnavbtm li.selected a:hover{ /*onMouseover style*/background:url(btn_grez.gif) repeat-x;/*Shift background image up to start of 2nd tab image*/}
+.matchnavbtm a:hover span, .matchnavbtm li.selected a:hover span{ /*onMouseover style*/background:url(btn_grez.gif) repeat-x;/*Shift background image up to start of 2nd tab image*/}
+.matchnavbtm li.active a, .matchnavbtm li.active a span {background:url(btn_grez.gif) repeat-x;} 
+
+#arwleft, #arwright {margin-left:30px;width:20px;height:20px;}
+#arwleft a {display:block;padding:0;width:20px;height:20px;border:0;background:url(arrows00.gif) 20px -0;}
+#arwleft a:hover {background-position:20px -20px;}
+#arwright a {display:block;padding:0;width:20px;height:20px;border:0;background:url(arrows00.gif);}
+#arwright a:hover {background-position:0 -20px;}
+/*-------------------------
+Bottom Content
+---------------------------*/
+#bottomcont {overflow:hidden;padding:5px 0 0;width:100%;}
+/*-------------------------
+Search
+---------------------------*/
+#search {float:right;width:280px;height:465px;}
+.moresearch {float:right;padding-top:7px;}
+.moresearch a:link, .moresearch a:visited {color:#2e3d15;font-size:11px;}
+.moresearch a:hover {color:#000;text-decoration:none;}
+#searchbdr {overflow:hidden;border:1px solid #bcb8a1;background-color:#ecf1e2;}
+#search ul {list-style-type:none;}
+#search li {display:block;overflow:hidden;width:100%;height:30px;border-bottom:solid 1px #fff;}
+.searchhdg {display:block;height:30px;-webkit-border-radius:10px 10px 0 0;-moz-border-radius:10px 10px 0 0;border-radius:10px 10px 0 0;padding:0 10px;border:1px solid #ADAA9C;border-bottom:0;
+background: #e7ebd6; /* Old browsers */
+background: -moz-linear-gradient(top,  #e7ebd6 0%, #cee3ad 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e7ebd6), color-stop(100%,#cee3ad)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #e7ebd6 0%,#cee3ad 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #e7ebd6 0%,#cee3ad 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #e7ebd6 0%,#cee3ad 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #e7ebd6 0%,#cee3ad 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e7ebd6', endColorstr='#cee3ad',GradientType=0 ); /* IE6-9 */
+}
+.searchhdgtext {display:block;float:left;padding:7px 0 0;color:#2e3d15;font-weight:700;}
+
+.searchtext {float:left;padding:7px 0 5px 10px;width:80px;}
+.dropdown {float:left;padding:5px 0 0 5px;}
+.searchbtn {margin-left:95px;padding-top:3px;}
+
+#popularsearch {overflow:hidden;width:100%;}
+#popularhdg {display:block;padding:8px 0 0 15px;height:22px;border-bottom:1px solid #acaa9f;background:url(bg_searc.gif) repeat-x;color:#2e3d15;font-weight:700;}
+.populartext {padding:5px 0 5px 15px;border-top:1px solid #fff;}
+#green {background:#fff;}
+#popularsearch a:link, #popularsearch a:visited {color:#2e3d15;text-decoration:none;font-size:11px;}
+#popularsearch a:hover {color:#000;text-decoration:underline;}
+#popularsearch ul {width:138px;border-right:1px solid #fff;list-style-type:none;}
+#popularsearch li {display:block;height:31.2px;border:0;}
+/*-------------------------
+Activity
+---------------------------*/
+#activity {float:right;margin:0 0 0 10px;width:250px;height:467px;}
+#activitybdr {margin-bottom:10px;border:1px solid #bcb8a1;background-color:#f5f3e9;}
+#activitybdr ul {list-style-type:none;}
+#activitybdr li {display:block;overflow:hidden;width:248px;height:86px;border-bottom:1px solid #fff;cursor:hand;}
+.borderone {border-left:1px solid #bcb8a1;}
+.borderbottom {border-right:1px solid #bcb8a1;border-bottom:1px solid #bcb8a1;border-left:1px solid #bcb8a1;}
+
+.activityhdg {display:block;height:30px;-webkit-border-radius:10px 10px 0 0;-moz-border-radius:10px 10px 0 0;border-radius:10px 10px 0 0;padding:0 10px;border:1px solid #ADAA9C;border-bottom:0;
+background: #f7efe7; /* Old browsers */
+background: -moz-linear-gradient(top,  #f7efe7 0%, #cec7b5 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f7efe7), color-stop(100%,#cec7b5)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #f7efe7 0%,#cec7b5 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #f7efe7 0%,#cec7b5 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #f7efe7 0%,#cec7b5 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #f7efe7 0%,#cec7b5 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7efe7', endColorstr='#cec7b5',GradientType=0 ); /* IE6-9 */
+}
+.activityhdgtext {display:block;float:left;padding:7px 0 0;color:#2e3d15;font-weight:700;}
+
+.activityicons {float:left;padding:5px 10px;width:150px;text-align:left;}
+.activitypic {display:block;float:left;margin:3px 0 0 5px;width:60px;height:65px;border:2px solid #cac6b2;background-color:#716d58;cursor:hand;}
+.activitytext {float:left;padding:2px 10px;width:130px;color:#434033;font-size:11px;line-height:1.3em;}
+.readmsg a:link, .readmsg a:visited {display:block;float:left;margin-bottom:5px;padding:1px 3px;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;background-color:#938e72;color:#fff;text-decoration:none;font-size:10px;}
+.readmsg a:hover {background-color:#a19c81;color:#fff;}
+
+#view a:link, #view a:visited {display:block;padding:9px;border-bottom:1px solid #bcb8a1;border-left:1px solid #bcb8a1;background-color:#dfddd3;color:#434033;text-align:center;text-decoration:none;font-weight:700;}
+#view a:hover {background-color:#c28627;}
+
+.jScrollPaneTrack {position: absolute;top: 0;right: 0;height: 100%;background: #cbc7b3;cursor: pointer;}
+.jScrollPaneDrag {position: absolute;overflow: hidden;background: #a19c81;cursor: pointer;}
+/*-------------------------
+Guide - Where Do I Start
+---------------------------*/
+#guide {float:right;margin-left:10px;width:250px;height:465px;border:1px solid #183144;background:#edf4fa url(bg_guide.gif) repeat-x bottom;color:#183144;text-align:center;}
+.guidehdg {display:block;padding:10px 0;background:url(bg_guide.gif) repeat-x;color:#fff;font-weight:700;font-size:17px;}
+.guidehdr {padding:10px 0;font-weight:700;font-style:italic;font-size:20px;}
+.guidetext {padding:10px;font-size:15px;line-height:1.2em;}
+.guidebdr {height:370px;}
+/*-------------------------
+Guide Nav
+---------------------------*/
+.guidenav{padding:10px 0 0 5px;border-bottom:solid 3px #2c5a7e;background-color:#6687a0;font-weight:700;line-height:400;}
+.guidenav ul{list-style-type:none;margin:0 0 0 10px /*Left offset of entire tab menu relative to page*/}
+.guidenav li{display:inline;margin:0;padding:0;}
+.guidenav a{float:left;margin:0;margin-right: 3px; /*spacing between each tab*/padding:0 0 0 7px;background:url(tab-left.gif) no-repeat left top;text-decoration:none;}
+.guidenav a span{display:block;float:left;padding: 5px 15px 3px 7px;background:url(tab-bg00.gif) no-repeat right top;color:#042033;font-weight:700;}
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+.guidenav a span {float:none;}
+/* End IE5-Mac hack */
+.guidenav a:hover span {color:#fff;}
+.guidenav li.selected a { /*Selected Tab style*/background-position:0 -32px; /*Shift background image up to start of 2nd tab image*/}
+.guidenav li.selected a span{color: #000; /*Selected Tab style*/background-position:100% -32px; /*Shift background image up to start of 2nd tab image*/}
+.guidenav a:hover, .guidenav li.selected a:hover{ /*onMouseover style*/background-position:0 -32px; /*Shift background image up to start of 2nd tab image*/}
+.guidenav a:hover span, .guidenav li.selected a:hover span{ /*onMouseover style*/background-position:100% -32px; /*Shift background image up to start of 2nd tab image*/}
+
+.guidenav-ov a { /*onMouseover style*/background:url(tab-left.gif) no-repeat 0 -32px; /*Shift background image up to start of 2nd tab image*/}
+.guidenav-ov a span{background:url(tab-bg00.gif) no-repeat 100% -32px; /*Shift background image up to start of 2nd tab image*/ /*onMouseover style*/color: #fff;}
+/*-------------------------
+Cupid Tip
+---------------------------*/
+#cupidtip {overflow:hidden;border:1px solid #183144;background:#fff url(bg_cupid.gif) repeat-x bottom;}
+#cupidbg {overflow:hidden;width:100%;background:url(cupid000.jpg) no-repeat bottom right;}
+.cupidtiphdg {padding:8px 15px;border-bottom:1px dashed #0a375a;background-color:#c6dff2;color:#183144;text-align:center;text-transform:capitalize;font-weight:700;font-style:italic;font-size:15px;}
+.cupidtiptext {padding:10px;color:#183144;text-align:left;}
+#cupidbg li {margin-left:5px;padding:2px 15px 2px 2px;}
+
+#cupidtip2 {border:1px solid #183144;background:#fff url(bg_cupie.gif) repeat-x 0 20px;}
+#cupidbg2 {background:url(cupid200.png) no-repeat bottom right;}
+.cupidtiphdg2 {padding:5px 10px;border-bottom:1px dashed #222;background-color:#c6dff2;color:#183144;text-align:left;font-weight:700;font-style:italic;font-size:15px;}
+.cupidtiptext2 {padding:7px 10px 15px;color:#183144;text-align:left;line-height:1.4em;}
+/*-------------------------
+Cupid Button
+---------------------------*/
+.cupidbtn{overflow:hidden;width:100%;}
+.cupidbtn ul{margin:0;/*Left offset of entire tab menu relative to page*/list-style-type: none;}
+.cupidbtn li{margin:0;padding:0;}
+.cupidbtn a{float:left;margin:0 3px 0 0;/*spacing between each tab*/padding:0 0 0 7px;background:url(cupidtab.gif) no-repeat left top;text-decoration:none;}
+.cupidbtn a span{display:block;float:left;padding: 7px 15px 8px 7px;background:url(cupidtac.gif) no-repeat right top;color:#fff;font-weight:700;}
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+.cupidbtn a span {float:none;}
+/* End IE5-Mac hack */
+.cupidbtn a:hover span {color: #fff;}
+.cupidbtn li.selected a{ /*Selected Tab style*/background-position:0 -32px; /*Shift background image up to start of 2nd tab image*/}
+.cupidbtn li.selected a span{color: #000; /*Selected Tab style*/background-position:100% -32px; /*Shift background image up to start of 2nd tab image*/}
+.cupidbtn a:hover, .cupidbtn li.selected a:hover{ /*onMouseover style*/background-position:0 -32px; /*Shift background image up to start of 2nd tab image*/}
+.cupidbtn a:hover span, .cupidbtn li.selected a:hover span{ /*onMouseover style*/background-position:100% -32px; /*Shift background image up to start of 2nd tab image*/}
+/*-------------------------
+jQuery slider plugin
+---------------------------*/
+.slider { position: relative;overflow:hidden;width: 770px; height: 210px;}
+.slider .mask {position: absolute; top: 0; left: 0; overflow: auto;width: 770px; height: 210px;}
+                                       /* Width below is max for Opera */
+.slider .mask ul { position: absolute; top: 0; left: 0; margin: 0;width: 32700px; height:210px;list-style: none;}
+.slider ul li {display: block; float: left; margin: 0; padding: 0; width: 770px; height: 210px; }
+/*
+  Prevents
+*/
+.slider .mask ul ul {position: static; overflow: visible; margin: 0; width: auto; border: 0; background: none;}
+.slider .mask ul ul li {float: none; width: auto; height: auto; background: none;}
+
+.thumbNav {display:none;}
+.start-stop {display:none;}
+/*-------------------------
+jQuery slider plugin2
+---------------------------*/
+.slider2 { position: relative;overflow:hidden;width: 250px; height: 456px;}
+.slider2 .mask2 {position: absolute; top: 0; left: 0;width: 250px; height: 456px;}
+                                       /* Width below is max for Opera */
+.slider2 .mask2 ul  { position: absolute; top: 0; left: 0; margin: 0;width: 32700px; height:456px;list-style: none;}
+.slider2 ul li {display: block; float: left; margin: 0; padding: 0; width: 250px; height: 456px;}
+/*
+  Prevents
+*/
+.slider2 .mask2 ul ul {position: static; overflow: visible; margin: 0; width: auto; border: 0; background: none;}
+.slider2 .mask2 ul ul li {float: none; width: auto; height: auto; background: none;}
+/*-------------------------
+misc for jQuery
+---------------------------*/
+.matchicons, .activityicons {display:none;}
+/*-------------------------
+scroll arrows for jscrollpane
+---------------------------*/
+a.jScrollArrowUp {background:url("basic_ar.gif") repeat-x scroll 0 0 transparent;}
+a.jScrollArrowDown {background:url("basic_ar.gif") repeat-x scroll 0 0 transparent;}

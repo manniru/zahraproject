@@ -1,0 +1,27 @@
+/*----------------------------
+FOOTER
+-----------------------------*/
+#footer {color:#4b250c;}
+#footer a:link, #footer a:visited {color:#4b250c;}
+/*---------------------------
+MEMBER HEADER
+----------------------------*/
+/*---------------------------
+Top Navigation
+----------------------------*/
+.membertop li {background-color: #bdbe84;}
+.membertop li, .membertop a:link, .membertop a:visited {color:#3d3d0d;}
+.membertop a:hover {color:#14354c;}
+/*---------------------------
+Middle Navigation
+----------------------------*/
+.membernav ul {border-bottom:solid 3px #a2a24f;}
+.membernav ul li a, .membernav ul li a.selected, .membernav ul li a:visited {color:#3d3d0d;}
+.membernav ul li a {border-right: 1px solid #a2a24f;}
+/*---------------------------
+Drop Down Menu
+----------------------------*/
+.popularsearchhdg {border-bottom:1px solid #d9eaf7;background-color:#fff;color:#3d3d0d;}
+.dropmenudiv {background-color:#8a8a3f;-webkit-border-radius:0 0 10px 10px;-moz-border-radius:0 0 10px 10px;border-radius:0 0 10px 10px}
+.dropmenudiv a,.dropmenudiv a:visited {border-bottom:1px solid #d5d591;color:#fff;}
+.dropmenudiv a:hover {background-color:#d5d591;color:#3d3d0d;}
