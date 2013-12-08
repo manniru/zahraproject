@@ -3,11 +3,14 @@
     <div id="sliderFrame">
         <div id="slider">
             <a href="# target="_blank"><img src="images/p0.jpg" alt="#cap1" /></a>
-            <img src="images/p1.jpg" alt="Zahra Mantch Making System" />
-            <img src="images/p2.jpg" alt="Zahra Mantch Making System" />
-            <img src="images/p3.jpg" alt="Zahra Mantch Making System" />
-            <img src="images/p4.jpg" alt="Zahra Mantch Making System" />
-            <img src="images/p5.jpg" alt="Zahra Mantch Making System" />
+            <img src="images/f1.jpg" alt="Zahra Mantch Making System" />
+            <img src="images/f2.jpg" alt="Zahra Mantch Making System" />
+            <img src="images/f5.jpg" alt="Zahra Mantch Making System" />
+            <img src="images/f4.jpg" alt="Zahra Mantch Making System" />
+            <img src="images/f3.jpg" alt="Zahra Mantch Making System" />
+            <img src="images/f6.jpg" alt="Zahra Mantch Making System" />
+            <img src="images/f7.jpg" alt="Zahra Mantch Making System" />
+            <img src="images/f8.jpg" alt="Zahra Mantch Making System" />
         </div>
 
     </div>
