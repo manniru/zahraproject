@@ -129,7 +129,7 @@ if(session.getAttribute("s_w") != null) { s_w = session.getAttribute("s_w").toSt
 	if(p != null && p.equals("aboutus")) { a5 = "class='menu active'"; }
 	if(p == null) { a6 = "class='menu active'"; }
 	String out = "<div id='primary'><ul class='links' id='navlist'>"+
-			"<li  class='menu'><a href='?p=register' "+a1+" ><span>Registration</span></a></li>"+
+			"<li  class='menu'><a href='/videochat/meeting/index.html' target='_new'><span>Video Chat</span></a></li>"+
 			"<li  class='menu'><a href='?p=members' "+a2+"><span>Members</span></a></li>"+
 			"<li  class='menu'><a href='?p=chatroom' "+a3+"><span>Chatroom</span></a></li>"+
 			"<li  class='menu'><a href='?p=contactus' "+a4+"><span>Contact</span></a></li>"+
@@ -902,7 +902,7 @@ if(session.getAttribute("uid") != null) {
   </div>
   </div>
   </div>
-  <div id="footer"> Copyright &copy; 2013 ZAHRAU SHARU MAIGARI (000796278)
+  <div id="footer"> System Developed By: &copy; 2013 ZAHRAU SHARU MAIGARI (000796278)
 <br/>
   </div>
   <div id="footer2">
